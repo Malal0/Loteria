@@ -21,7 +21,7 @@
 }
 
 img {
-    height: 15em;
+    height: 100%;
     width: auto;
 }
 
@@ -53,8 +53,8 @@ body {
 #card-pic {
     z-index: -1;
     position: absolute;
-    top: 2%;
-    left: 0%;
+    top: 0;
+    left: 0;
 }
 
 #number {
