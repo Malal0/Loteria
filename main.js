@@ -1,4 +1,11 @@
+//  the variables for the previous card container
+const leftBtn = document.querySelector("#left-btn")
+const rightBtn = document.querySelector("#right-btn")
+const previousCards = document.querySelector("#previousCards");
+
+//  the variable for the button to go next
 const nextBtn = document.querySelector("#card-button");
+//  the variables for the card being shown
 const cardNumber = document.querySelector("#number");
 const cardName = document.querySelector("#name");
 const cardImage = document.querySelector("#cardImg");
@@ -67,6 +74,20 @@ let newCardsArray = [];
         push the number into the array
         if the number was already used
         rerun the function and minus 1 on the iteration   */
+function randomizeCards() {
+    for (let i = 0; i < cards.length; i++) {
+        let rand = Math.floor(Math.random() * 54)
+        if (!newCardsArray.includes(rand)/*rand isn't included in new cards array*/) {
+            newCardsArray.push(rand);
+        } else {
+            i - 1;
+            console.log(rand)
+        }
+    }
+}
+
+randomizeCards();
+console.log(newCardsArray);
 
 function generateCard() {
     cardSelected = cards[Math.floor(Math.random() * cards.length)];
@@ -91,3 +112,11 @@ function change() {
     cardNumber.innerHTML = index;
     cardImage.src = image;
 };
+
+function clicked() {
+    console.log(this);
+    console.log("clicked");
+};
+
+leftBtn.addEventListener("click", clicked);
+rightBtn.addEventListener("click", clicked);

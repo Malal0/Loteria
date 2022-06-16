@@ -45,6 +45,13 @@ img {
     border-radius: 10px;
 }
 
+.blankCard {
+    aspect-ratio: 5/7;
+    background-color: rgb(226, 210, 193);
+    height: calc(100% - 20px);
+    margin: 10px;
+}
+
 /*  IDs */
 
 #main-container {
@@ -95,8 +102,21 @@ img {
     margin: auto;
     height: 100%;
     z-index: 1;
-    background-color: #9c7070;
-    border: 5px solid purple;
+    background-color: #2e2e2eae;
+    display: flex;
+    overflow: auto;
+}
+
+#previousCards::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#previousCards {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 #cardImg {
