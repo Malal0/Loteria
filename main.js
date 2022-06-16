@@ -76,7 +76,7 @@ let newCardsArray = [];
         push the number into the array
         if the number was already used
         rerun the function and minus 1 on the iteration   */
-function randomizeCards() {
+function shuffleCards() {
     newCardsArray = [];
     for (let i = 0; i < cards.length; i++) {
         let rand = Math.floor(Math.random() * 54)
@@ -84,7 +84,6 @@ function randomizeCards() {
             newCardsArray.push(rand);
         } else {
             i--;
-            console.log(rand);
         }
     };
     console.log(newCardsArray);
@@ -105,7 +104,7 @@ function generateCard() {
 };
 
 nextBtn.addEventListener("click", generateCard);
-shuffleBtn.addEventListener("click", randomizeCards);
+shuffleBtn.addEventListener("click", shuffleCards);
 
 //need index of array and then change //
 
