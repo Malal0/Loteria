@@ -60,6 +60,14 @@ var cards = [
     { name: "La rana", number: 54, image: "https://static.wixstatic.com/media/65b918_68e3519afe5946e69d2c724136da00f2~mv2.jpeg/v1/fill/w_206,h_298,al_c,lg_1,q_80,enc_auto/54_%20La%20Rana%20Loteria.jpeg" }
 ];
 
+let newCardsArray = [];
+
+/*   I need a function to generate a randomized order of the cards array
+        generate a random number from 1-54
+        push the number into the array
+        if the number was already used
+        rerun the function and minus 1 on the iteration   */
+
 function generateCard() {
     cardSelected = cards[Math.floor(Math.random() * cards.length)];
     index = cardSelected.number;
