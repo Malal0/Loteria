@@ -5,6 +5,8 @@ const previousCards = document.querySelector("#previousCards");
 
 //  the variable for the button to go next
 const nextBtn = document.querySelector("#card-button");
+//  the variable for the randomize button
+const shuffleBtn = document.querySelector("#randomize-cards-button");
 //  the variables for the card being shown
 const cardNumber = document.querySelector("#number");
 const cardName = document.querySelector("#name");
@@ -75,19 +77,18 @@ let newCardsArray = [];
         if the number was already used
         rerun the function and minus 1 on the iteration   */
 function randomizeCards() {
+    newCardsArray = [];
     for (let i = 0; i < cards.length; i++) {
         let rand = Math.floor(Math.random() * 54)
         if (!newCardsArray.includes(rand)/*rand isn't included in new cards array*/) {
             newCardsArray.push(rand);
         } else {
-            i - 1;
-            console.log(rand)
+            i--;
+            console.log(rand);
         }
-    }
+    };
+    console.log(newCardsArray);
 }
-
-randomizeCards();
-console.log(newCardsArray);
 
 function generateCard() {
     cardSelected = cards[Math.floor(Math.random() * cards.length)];
@@ -104,6 +105,7 @@ function generateCard() {
 };
 
 nextBtn.addEventListener("click", generateCard);
+shuffleBtn.addEventListener("click", randomizeCards);
 
 //need index of array and then change //
 

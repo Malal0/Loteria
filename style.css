@@ -149,7 +149,8 @@ img {
     backdrop-filter: blur(10px);
 }
 
-#card-button {
+#card-button,
+#randomize-cards-button {
     width: 200px;
     aspect-ratio: 7/3;
     font-size: 30px;
