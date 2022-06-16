@@ -7,6 +7,8 @@ const previousCards = document.querySelector("#previousCards");
 const nextBtn = document.querySelector("#card-button");
 //  the variable for the randomize button
 const shuffleBtn = document.querySelector("#randomize-cards-button");
+//  the variable for the shuffle button
+const resetBtn = document.querySelector("#reset-button");
 //  the variables for the card being shown
 const cardNumber = document.querySelector("#number");
 const cardName = document.querySelector("#name");
@@ -70,49 +72,57 @@ var cards = [
 ];
 
 let newCardsArray = [];
+let order = 0;
 
-/*   I need a function to generate a randomized order of the cards array
-        generate a random number from 1-54
-        push the number into the array
-        if the number was already used
-        rerun the function and minus 1 on the iteration   */
+//
 function shuffleCards() {
-    newCardsArray = [];
+    //newCardsArray = [];
     for (let i = 0; i < cards.length; i++) {
         let rand = Math.floor(Math.random() * 54)
-        if (!newCardsArray.includes(rand)/*rand isn't included in new cards array*/) {
+        if (!newCardsArray.includes(rand)) {
             newCardsArray.push(rand);
-        } else {
+        } else if (newCardsArray.includes(rand) && newCardsArray.length < 54) {
             i--;
         }
+        // else {
+        //     i--;
+        // }
     };
     console.log(newCardsArray);
 }
 
 function generateCard() {
-    cardSelected = cards[Math.floor(Math.random() * cards.length)];
+    cardSelected = cards[newCardsArray[order]];
     index = cardSelected.number;
     text = cardSelected.name;
     image = cardSelected.image;
 
-    console.log(cardSelected);
     console.log(index);
     console.log(text);
     console.log(image);
 
     change();
+    order++;
 };
-
-nextBtn.addEventListener("click", generateCard);
-shuffleBtn.addEventListener("click", shuffleCards);
-
-//need index of array and then change //
 
 function change() {
     cardName.innerHTML = text;
     cardNumber.innerHTML = index;
     cardImage.src = image;
 };
+
+function reset() {
+    order = 0;
+    newCardsArray = [];
+    cardName.innerHTML = "";
+    cardNumber.innerHTML = "";
+    cardImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F7777713%2Fr%2Fil%2Fdbfe20%2F1686069708%2Fil_794xN.1686069708_93k9.jpg&amp;f=1&amp;nofb=1";
+}
+
+nextBtn.addEventListener("click", generateCard);
+shuffleBtn.addEventListener("click", shuffleCards);
+
+//need index of array and then change //
 
 function clicked() {
     console.log(this);
@@ -121,3 +131,4 @@ function clicked() {
 
 leftBtn.addEventListener("click", clicked);
 rightBtn.addEventListener("click", clicked);
+resetBtn.addEventListener("click", reset);
