@@ -74,6 +74,12 @@ var cards = [
 let newCardsArray = [];
 let order = 0;
 
+let previousCardsArray = [];
+let currentCard = {
+    number: 0,
+    name: "",
+    image: "",
+}
 //
 function shuffleCards() {
     //newCardsArray = [];
@@ -84,9 +90,6 @@ function shuffleCards() {
         } else if (newCardsArray.includes(rand) && newCardsArray.length < 54) {
             i--;
         }
-        // else {
-        //     i--;
-        // }
     };
     console.log(newCardsArray);
 }
@@ -97,9 +100,11 @@ function generateCard() {
     text = cardSelected.name;
     image = cardSelected.image;
 
-    console.log(index);
-    console.log(text);
-    console.log(image);
+    currentCard.number = index;
+    currentCard.name = text;
+    currentCard.image = image;
+
+    moveCardToPrevArray()
 
     change();
     order++;
@@ -117,6 +122,11 @@ function reset() {
     cardName.innerHTML = "";
     cardNumber.innerHTML = "";
     cardImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F7777713%2Fr%2Fil%2Fdbfe20%2F1686069708%2Fil_794xN.1686069708_93k9.jpg&amp;f=1&amp;nofb=1";
+}
+
+function moveCardToPrevArray() {
+    previousCardsArray.push(currentCard)
+    console.log(previousCardsArray)
 }
 
 nextBtn.addEventListener("click", generateCard);
