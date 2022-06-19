@@ -13,6 +13,9 @@ const resetBtn = document.querySelector("#reset-button");
 const cardNumber = document.querySelector("#number");
 const cardName = document.querySelector("#name");
 const cardImage = document.querySelector("#cardImg");
+//  the variable for the previousCards div
+const prevCard = document.querySelector("#previousCards")
+
 //  original array of all cards
 var cards = [
     { name: "El gallo", number: 1, image: "https://static.wixstatic.com/media/65b918_ca3fa8edd978491bb077642a7dfffd86~mv2.jpeg/v1/fill/w_206,h_298,al_c,q_80,enc_auto/1%20Rooster%20Loteria.jpeg" },
@@ -104,6 +107,7 @@ function generateCard() {
 
     change();
     order++;
+    displayPrevCards(index);
 };
 
 function change() {
@@ -123,7 +127,16 @@ function reset() {
 
 function pushCurrentCard() {
     previousCardsArray.push({ name: text, number: index, image: image });
-    console.table(previousCardsArray);
+}
+
+function displayPrevCards(number) {
+    const newDiv = document.createElement("div");
+    newDiv.textContent = number;
+    newDiv.cl
+    //prevCard.appendChild(newDiv);
+    prevCard.insertBefore(newDiv, prevCard.firstElementChild);
+    newDiv.className = "blankCard";
+    console.log(newDiv);
 }
 
 nextBtn.addEventListener("click", generateCard);
