@@ -13,7 +13,7 @@ const resetBtn = document.querySelector("#reset-button");
 const cardNumber = document.querySelector("#number");
 const cardName = document.querySelector("#name");
 const cardImage = document.querySelector("#cardImg");
-
+//  original array of all cards
 var cards = [
     { name: "El gallo", number: 1, image: "https://static.wixstatic.com/media/65b918_ca3fa8edd978491bb077642a7dfffd86~mv2.jpeg/v1/fill/w_206,h_298,al_c,q_80,enc_auto/1%20Rooster%20Loteria.jpeg" },
     { name: "El diablito", number: 2, image: "https://static.wixstatic.com/media/65b918_b63638e7835544ba93c78c1ac4db3202~mv2.jpeg/v1/fill/w_206,h_298,al_c,q_80,enc_auto/2_%20El%20Diablito%20Loteria.jpeg" },
@@ -70,15 +70,15 @@ var cards = [
     { name: "El arpa", number: 53, image: "https://static.wixstatic.com/media/65b918_75c875425fb54c9aa6ecd98fe93a3f30~mv2.jpeg/v1/fill/w_206,h_298,al_c,lg_1,q_80,enc_auto/53_%20El%20Arpa%20Loteria.jpeg" },
     { name: "La rana", number: 54, image: "https://static.wixstatic.com/media/65b918_68e3519afe5946e69d2c724136da00f2~mv2.jpeg/v1/fill/w_206,h_298,al_c,lg_1,q_80,enc_auto/54_%20La%20Rana%20Loteria.jpeg" }
 ];
-
+//  the new randomized order of numbers from 1-54
 let newCardsArray = [];
 let order = 0;
-
+//  the array of cards that have been used
 let previousCardsArray = [];
-let currentCard = {
-    number: 0,
-    name: "",
-    image: "",
+function currentCard(number, name, image) {
+    this.number = number;
+    this.name = name;
+    this.image = image;
 }
 //
 function shuffleCards() {
@@ -100,11 +100,7 @@ function generateCard() {
     text = cardSelected.name;
     image = cardSelected.image;
 
-    currentCard.number = index;
-    currentCard.name = text;
-    currentCard.image = image;
-
-    moveCardToPrevArray()
+    pushCurrentCard();
 
     change();
     order++;
@@ -122,11 +118,12 @@ function reset() {
     cardName.innerHTML = "";
     cardNumber.innerHTML = "";
     cardImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F7777713%2Fr%2Fil%2Fdbfe20%2F1686069708%2Fil_794xN.1686069708_93k9.jpg&amp;f=1&amp;nofb=1";
+    previousCardsArray = [];
 }
 
-function moveCardToPrevArray() {
-    previousCardsArray.push(currentCard)
-    console.log(previousCardsArray)
+function pushCurrentCard() {
+    previousCardsArray.push({ name: text, number: index, image: image });
+    console.table(previousCardsArray);
 }
 
 nextBtn.addEventListener("click", generateCard);
