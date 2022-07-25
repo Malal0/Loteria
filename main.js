@@ -17,7 +17,7 @@ const cardImage = document.querySelector("#cardImg");
 const prevCard = document.querySelector("#previousCards")
 
 //  original array of all cards
-var cards = [
+const cards = [
     { name: "El gallo", number: 1, image: "https://static.wixstatic.com/media/65b918_ca3fa8edd978491bb077642a7dfffd86~mv2.jpeg/v1/fill/w_206,h_298,al_c,q_80,enc_auto/1%20Rooster%20Loteria.jpeg" },
     { name: "El diablito", number: 2, image: "https://static.wixstatic.com/media/65b918_b63638e7835544ba93c78c1ac4db3202~mv2.jpeg/v1/fill/w_206,h_298,al_c,q_80,enc_auto/2_%20El%20Diablito%20Loteria.jpeg" },
     { name: "La dama", number: 3, image: "https://static.wixstatic.com/media/65b918_7f9bf6c4384a400b91aa55b2a3810724~mv2.jpeg/v1/fill/w_204,h_298,al_c,q_80,enc_auto/3_%20La%20Dama%20Loteria.jpeg" },
@@ -131,12 +131,14 @@ function pushCurrentCard() {
 
 function displayPrevCards(number) {
     const newDiv = document.createElement("div");
+    //const newImg = newDiv.createElement("img");
+
     newDiv.textContent = number;
-    newDiv.cl
+    //newImg.src = image;
     //prevCard.appendChild(newDiv);
     prevCard.insertBefore(newDiv, prevCard.firstElementChild);
     newDiv.className = "blankCard";
-    console.log(newDiv);
+    console.log(newImg);
 }
 
 nextBtn.addEventListener("click", generateCard);
