@@ -172,7 +172,7 @@ function randomArray(length) {
 const playerCard1 = randomArray(16);
 const playerCard = document.getElementById("playerCard");
 for (let i = 0; i < 16; i++) {
-    playerCard.innerHTML += `<img class="playerCard-block" id="player-card-block" src=${cards[playerCard1[i]].image} alt=${cards[playerCard1[i]].image}/>`
+    playerCard.innerHTML += `<img class="playerCard-block" src=${cards[playerCard1[i]].image} alt=${cards[playerCard1[i]].image}/>`
 }
 console.log(playerCard1);
 

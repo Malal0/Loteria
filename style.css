@@ -19,6 +19,7 @@ html {
 body {
     /*background-color: #f1f4e3;*/
     background-image: linear-gradient(0deg, rgba(255, 255, 170, 0.5), rgba(167, 255, 255, 0.5));
+    height: 200vh;
 }
 
 img {
@@ -164,9 +165,9 @@ img {
 /*  playerCard  */
 #playerCard {
     aspect-ratio: 10/16;
-    width: 400px;
+    height: 80vh;
     background-color: #16181e;
-    margin: auto;
+    margin: 10vh auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -178,4 +179,17 @@ img {
     background-color: rgb(240, 240, 240);
     width: 100%;
     height: 100%;
+    border-radius: 5px;
+}
+
+.playerCard-block:active {
+    transform: scale(.9);
+    border: 5px solid red;
+    outline: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px 10px green;
+    filter: brightness(120%);
+}
+
+.playerCard-block:hover {
+    filter: brightness(120%);
 }
