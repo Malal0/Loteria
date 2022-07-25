@@ -154,3 +154,26 @@ function clicked() {
 leftBtn.addEventListener("click", clicked);
 rightBtn.addEventListener("click", clicked);
 resetBtn.addEventListener("click", reset);
+
+// function to create array with random non-repeating numbers with the length of the argument
+function randomArray(length) {
+    let randArray = [];
+    for (let i = 0; i < length; i++) {
+        let rand = Math.floor(Math.random() * 54);
+        if (!randArray.includes(rand)) {
+            randArray.push(rand);
+        } else {
+            i--;
+        }
+    }
+    return randArray;
+}
+
+const playerCard1 = randomArray(16);
+const playerCard = document.getElementById("playerCard");
+for (let i = 0; i < 16; i++) {
+    playerCard.innerHTML += `<img class="playerCard-block" id="player-card-block" src=${cards[playerCard1[i]].image} alt=${cards[playerCard1[i]].image}/>`
+}
+console.log(playerCard1);
+
+// finish above. make player card appear.
