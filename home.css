@@ -26,6 +26,7 @@ a:hover {
     background-size: cover;
     font-size: 24px;
     height: 100vh;
+    overflow: hidden;
 }
 
 #card-border {
@@ -49,6 +50,26 @@ a:hover {
     flex-direction: column;
     gap: 50px;
     letter-spacing: 10%;
+}
+
+#or {
+    transform: rotate(-18deg);
+}
+
+#img1 {
+    position: absolute;
+    width: 442px;
+    height: 1051px;
+    left: -337px;
+    top: -506px;
+}
+
+#img2 {
+    position: absolute;
+    width: 947px;
+    height: 1314.94px;
+    left: -72px;
+    top: -692px;
 }
 
 .flex-center {
