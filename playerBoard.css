@@ -13,13 +13,13 @@
 a {
     color: hsl(0, 0%, 90%);
     text-transform: capitalize;
+    font-size: 3em;
 }
 
 a:hover {
     color: rgb(255, 255, 255);
     /* text-shadow: 0 0 5px hsl(29, 47%, 90%); */
-    -webkit-text-stroke: .5px hsl(0, 0%, 0%);
-    transform: scale(1.05);
+    -webkit-text-stroke: 2px hsl(0, 0%, 0%);
 }
 
 body {
@@ -27,7 +27,7 @@ body {
     background-size: cover;
     font-size: 24px;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ body {
     /* height: 783.52px;
     width: 530.08px; */
     width: 90%;
-    aspect-ratio: 1.478/1;
+    aspect-ratio: 1/1.478;
     margin: auto;
     border-radius: 3px;
     background-color: hsl(29, 47%, 90%);
@@ -106,5 +106,15 @@ body {
 }
 
 #newCard {
+    aspect-ratio: 1.496;
+    font-size: 32px;
     padding: 10px 15px;
+    border: 2px solid black;
+    outline: .4em solid hsl(29, 47%, 90%);
+    background-color: hsl(85, 26%, 80%);
+}
+
+#newCard:hover {
+    filter: brightness(110%);
+    transform: scale(1.03);
 }
