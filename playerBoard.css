@@ -24,15 +24,19 @@ a:hover {
 
 body {
     background-image: url(/images/bg-images/640px.jpg);
+}
+
+#main {
     background-size: cover;
     font-size: 24px;
     height: 100vh;
-    overflow-y: hidden;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2em;
+    margin: 2em 0;
 }
 
 #card-border {
