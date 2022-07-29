@@ -11,22 +11,28 @@
 }
 
 a {
-    color: black;
+    color: hsl(0, 0%, 90%);
+    text-transform: capitalize;
 }
 
 a:hover {
-    color: black;
+    color: rgb(255, 255, 255);
     /* text-shadow: 0 0 5px hsl(29, 47%, 90%); */
-    -webkit-text-stroke: 1px hsl(29, 47%, 90%);
+    -webkit-text-stroke: .5px hsl(0, 0%, 0%);
     transform: scale(1.05);
 }
 
-#homepage {
+body {
     background-image: url(/images/bg-images/640px.jpg);
     background-size: cover;
     font-size: 24px;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
 }
 
 #card-border {
@@ -52,93 +58,10 @@ a:hover {
     letter-spacing: 10%;
 }
 
-#or {
-    transform: rotate(-18deg);
-}
-
-/*cards on the left*/
-#img-L-1 {
-    position: absolute;
-    top: -477px;
-    left: -290px;
-    transform: rotate(-11.19deg);
-    z-index: 3;
-}
-
-#img-L-2 {
-    position: absolute;
-    top: -211px;
-    left: -253px;
-    transform: rotate(27.18deg);
-    z-index: 2;
-}
-
-#img-L-3 {
-    position: absolute;
-    top: 90px;
-    left: -261px;
-    transform: rotate(-33.85deg);
-    z-index: 1;
-}
-
-#tablet-1 {
-    top: -576px;
-    right: -836px;
-    z-index: 4;
-    position: absolute;
-    transform: rotate(3.04deg);
-}
-
-#tablet-2 {
-    top: -454px;
-    right: -740px;
-    z-index: 3;
-    position: absolute;
-    transform: rotate(-3.48deg);
-}
-
-#tablet-3 {
-    top: -363px;
-    right: -651px;
-    z-index: 2;
-    position: absolute;
-    transform: rotate(-9.06deg);
-}
-
-#tablet-4 {
-    top: -260px;
-    right: -578px;
-    z-index: 1;
-    position: absolute;
-    transform: rotate(-14.09deg);
-}
-
-#player-tablet-1 {
-    position: absolute;
-}
-
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.bg-el {
-    z-index: -10;
-    position: absolute;
-}
-
-.bg-el-left img {
-    width: 254.58px;
-    height: 380.85px;
-    border-radius: 15px;
-    box-shadow: 44px 21px 22px 13px hsla(0, 0%, 0%, 0.5);
-}
-
-.card-links {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 }
 
 .tablet {
@@ -175,4 +98,8 @@ a:hover {
     outline: 5px solid rgb(255, 255, 255);
     box-shadow: 0 0 5px 10px green;
     filter: brightness(120%);
+}
+
+#newCard {
+    padding: 10px 15px;
 }

@@ -1,8 +1,5 @@
-const firstTablet = document.getElementById("tablet-1");
-const secondTablet = document.getElementById("tablet-2");
-const thirdTablet = document.getElementById("tablet-3");
-const fourthTablet = document.getElementById("tablet-4");
 const playerTablet = document.getElementById("player-tablet-1");
+const newCard = document.getElementById("newCard");
 
 //  original array of all cards
 const cards = [
@@ -300,16 +297,14 @@ function generateTablet(domEl) {
     }
 }
 // finish above. make player card appear.
-generateTablet(firstTablet);
-generateTablet(secondTablet);
-generateTablet(thirdTablet);
-generateTablet(fourthTablet);
 generateTablet(playerTablet);
 
-setInterval(() => {
-    generateTablet(firstTablet);
-    generateTablet(secondTablet);
-    generateTablet(thirdTablet);
-    generateTablet(fourthTablet);
-}, 8000);
+newCard.addEventListener("click", () => { generateTablet(playerTablet) });
+
+addEventListener("click", (e) => {
+    if (e.target.classList.contains("tablet-block")) {
+        e.target.classList.toggle("clicked");
+    }
+    console.log(e.target);
+});
 
