@@ -97,18 +97,24 @@ a:hover {
     z-index: 1;
 }
 
+#tablet-1 {
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bg-img-el {
+.bg-el {
     z-index: -10;
     position: absolute;
 }
 
-.bg-img-el-left img {
+.bg-el-left img {
     width: 254.58px;
     height: 380.85px;
     border-radius: 15px;
@@ -119,4 +125,16 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.tablet {
+    height: 783.52px;
+    width: 530.08px;
+    border-radius: 3px;
+    background-color: hsl(29, 47%, 90%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 17.23px;
+    padding: 17.23px;
 }
