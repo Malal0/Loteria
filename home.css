@@ -56,22 +56,6 @@ a:hover {
     transform: rotate(-18deg);
 }
 
-#img1 {
-    position: absolute;
-    width: 442px;
-    height: 1051px;
-    left: -337px;
-    top: -506px;
-}
-
-#img2 {
-    position: absolute;
-    width: 947px;
-    height: 1314.94px;
-    left: -72px;
-    top: -692px;
-}
-
 /*cards on the left*/
 #img-L-1 {
     position: absolute;
@@ -98,9 +82,38 @@ a:hover {
 }
 
 #tablet-1 {
-    top: 10px;
-    right: 10px;
+    top: -576px;
+    right: -836px;
     z-index: 4;
+    position: absolute;
+    transform: rotate(3.04deg);
+}
+
+#tablet-2 {
+    top: -454px;
+    right: -740px;
+    z-index: 3;
+    position: absolute;
+    transform: rotate(-3.48deg);
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+#tablet-3 {
+    top: -363px;
+    right: -651px;
+    z-index: 2;
+    position: absolute;
+    transform: rotate(-9.06deg);
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+#tablet-4 {
+    top: -260px;
+    right: -578px;
+    z-index: 1;
+    position: absolute;
+    transform: rotate(-14.09deg);
+    background-color: rgb(0, 128, 0, .3);
 }
 
 .flex-center {
