@@ -65,16 +65,22 @@ body {
 }
 
 .tablet {
-    height: 783.52px;
-    width: 530.08px;
+    /* height: 783.52px;
+    width: 530.08px; */
+    width: 90%;
+    aspect-ratio: 1.478/1;
+    margin: auto;
     border-radius: 3px;
     background-color: hsl(29, 47%, 90%);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 17.23px;
-    padding: 17.23px;
+    /* gap: 17.23px;
+    padding: 17.23px; */
+    gap: .25em;
+    padding: .25em;
     box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
+    t
 }
 
 .tablet-block {
