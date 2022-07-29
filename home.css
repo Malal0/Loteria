@@ -72,6 +72,17 @@ a:hover {
     top: -692px;
 }
 
+/*cards on the left*/
+#img-L-1 {
+    height: 380.85px;
+    width: 254px;
+    position: absolute;
+    top: -477px;
+    left: -290px;
+    transform: rotate(-11.19deg);
+    border-radius: 14px;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;

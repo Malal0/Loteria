@@ -99,20 +99,6 @@ img {
 
 /*  IDs */
 
-#homepage {
-    background-image: url(/images/bg-images/640px.jpg);
-    background-size: contain;
-}
-
-#card-border {
-    width: 271px;
-    height: 453px;
-    border: 2px solid black;
-    background-color: hsl(85, 26%, 80%);
-    margin: auto;
-    text-align: center;
-}
-
 #main-container {
     width: 95%;
     height: 100vh;
