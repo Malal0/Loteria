@@ -20,8 +20,13 @@ html {
 body {
     /*background-color: #f1f4e3;*/
     /* background-image: linear-gradient(0deg, rgba(255, 255, 170, 0.5), rgba(167, 255, 255, 0.5)); */
-    height: 100vh;
+    height: 105vh;
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em 0;
 }
 
 /*  Classes */
@@ -162,7 +167,6 @@ body {
 /*  playerCard  */
 #playerCard {
     aspect-ratio: 10/16;
-    height: 80vh;
     background-color: #16181e;
     margin: 10vh auto;
     display: grid;
@@ -176,7 +180,6 @@ body {
     background-color: rgb(240, 240, 240);
     width: 100%;
     height: 100%;
-    border-radius: 5px;
 }
 
 .playerCard-block:active {
@@ -189,4 +192,33 @@ body {
 
 .playerCard-block:hover {
     filter: brightness(120%);
+}
+
+.clicked {
+    transform: scale(.9);
+    border: 5px solid red;
+    outline: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px 10px green;
+    filter: brightness(120%);
+}
+
+#newCard {
+    aspect-ratio: 1.496;
+    font-size: 32px;
+    padding: 11px;
+    border: 2px solid black;
+    outline: .4em solid hsl(29, 47%, 90%);
+    background-color: hsl(85, 26%, 80%);
+    min-width: fit-content;
+    box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
+}
+
+#newCard:hover {
+    filter: brightness(110%);
+    transform: scale(1.03);
+}
+
+#newCard:active {
+    filter: brightness(95%);
+    box-shadow: -6px 16px 16px 19px rgb(0, 0, 0, .5);
 }

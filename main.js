@@ -339,6 +339,7 @@ function reset() {
     cardNumber.innerHTML = "";
     cardImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F7777713%2Fr%2Fil%2Fdbfe20%2F1686069708%2Fil_794xN.1686069708_93k9.jpg&amp;f=1&amp;nofb=1";
     previousCardsArray = [];
+    previousCards.innerHTML = "";
 }
 
 function pushCurrentCard() {
@@ -354,7 +355,7 @@ function displayPrevCards(number) {
     //prevCard.appendChild(newDiv);
     prevCard.insertBefore(newDiv, prevCard.firstElementChild);
     newDiv.className = "blankCard";
-    console.log(newImg);
+    // console.log(newImg);
 }
 
 nextBtn.addEventListener("click", generateCard);
@@ -387,9 +388,23 @@ function randomArray(length) {
 
 const playerCard1 = randomArray(16);
 const playerCard = document.getElementById("playerCard");
-for (let i = 0; i < 16; i++) {
-    playerCard.innerHTML += `<img class="playerCard-block" src=${cards[playerCard1[i]].image} alt=${cards[playerCard1[i]].image}/>`
-}
-console.log(playerCard1);
 
+// below is for the player tablet
+
+addEventListener("click", (e) => {
+    if (e.target.classList.contains("playerCard-block")) {
+        e.target.classList.toggle("clicked");
+    }
+});
+
+function generateTablet(domEl) {
+    domEl.innerHTML = "";
+    let playerCard1 = randomArray(16);
+    for (let i = 0; i < 16; i++) {
+        domEl.innerHTML += `<img class="playerCard-block" src='${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
+    }
+}
 // finish above. make player card appear.
+generateTablet(playerCard);
+
+newCard.addEventListener("click", () => { generateTablet(playerCard) });
