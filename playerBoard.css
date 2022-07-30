@@ -26,6 +26,7 @@ body {
     background-image: url(/images/bg-images/640px.jpg);
     height: 100vh;
     object-fit: cover;
+    scroll-behavior: smooth;
 }
 
 #main {
@@ -115,11 +116,12 @@ body {
 #newCard {
     aspect-ratio: 1.496;
     font-size: 32px;
-    padding: 10px;
+    padding: 11px;
     border: 2px solid black;
     outline: .4em solid hsl(29, 47%, 90%);
     background-color: hsl(85, 26%, 80%);
     min-width: fit-content;
+    box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5)
 }
 
 #newCard:hover {
@@ -127,6 +129,11 @@ body {
     transform: scale(1.03);
 }
 
-@media (min-width: 401px) {
-    #newCard {}
+#newCard:active {
+    filter: brightness(95%);
+    box-shadow: -6px 16px 16px 19px rgb(0, 0, 0, .5);
 }
+
+/* @media (min-width: 401px) {
+    #newCard {}
+} */

@@ -305,6 +305,5 @@ addEventListener("click", (e) => {
     if (e.target.classList.contains("tablet-block")) {
         e.target.classList.toggle("clicked");
     }
-    console.log(e.target);
 });
 

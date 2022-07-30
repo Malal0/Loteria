@@ -2,7 +2,9 @@ const firstTablet = document.getElementById("tablet-1");
 const secondTablet = document.getElementById("tablet-2");
 const thirdTablet = document.getElementById("tablet-3");
 const fourthTablet = document.getElementById("tablet-4");
-const playerTablet = document.getElementById("player-tablet-1");
+const card1 = document.getElementById("img-L-1");
+const card2 = document.getElementById("img-L-2");
+const card3 = document.getElementById("img-L-3");
 
 //  original array of all cards
 const cards = [
@@ -278,6 +280,63 @@ const cards = [
     }
 ];
 
+const cardPNGs = [
+    './images/Loteria Cards/El Gallo Loteria.png',
+    './images/Loteria Cards/El Diablito Loteria.png',
+    './images/Loteria Cards/La Dama Loteria.png',
+    './images/Loteria Cards/El Catrín Loteria.png',
+    './images/Loteria Cards/El Paraguas Loteria.png',
+    './images/Loteria Cards/La Sirena Loteria.png',
+    './images/Loteria Cards/La Escalera Loteria.png',
+    './images/Loteria Cards/La Botella Loteria.png',
+    './images/Loteria Cards/El Barril Loteria.png',
+    './images/Loteria Cards/El Árbol Loteria.png',
+    './images/Loteria Cards/El Melón Loteria.png',
+    './images/Loteria Cards/El Valiente Loteria.png',
+    './images/Loteria Cards/El Gorrito Loteria.png',
+    './images/Loteria Cards/La Muerte Loteria.png',
+    './images/Loteria Cards/La Pera Loteria.png',
+    './images/Loteria Cards/La Bandera Loteria.png',
+    './images/Loteria Cards/El Bandolón Loteria.png',
+    './images/Loteria Cards/El Violoncello Loteria.png',
+    './images/Loteria Cards/La Garza Loteria.png',
+    './images/Loteria Cards/El Pájaro Loteria.png',
+    './images/Loteria Cards/La Mano Loteria.png',
+    './images/Loteria Cards/La Bota Loteria.png',
+    './images/Loteria Cards/La Luna Loteria.png',
+    './images/Loteria Cards/El Cotorro Loteria.png',
+    './images/Loteria Cards/El Borracho Loteria.png',
+    './images/Loteria Cards/El Negrito Loteria.png',
+    './images/Loteria Cards/El Corazón Loteria.png',
+    './images/Loteria Cards/La Sandía Loteria.png',
+    './images/Loteria Cards/El Tambor Loteria.png',
+    './images/Loteria Cards/El Camarón Loteria.png',
+    './images/Loteria Cards/Las jaras Loteria.png',
+    './images/Loteria Cards/El Músico Loteria.png',
+    './images/Loteria Cards/La Araña Loteria.png',
+    './images/Loteria Cards/El Soldado Loteria.png',
+    './images/Loteria Cards/La Estrella Loteria.png',
+    './images/Loteria Cards/El Cazo Loteria.png',
+    './images/Loteria Cards/El Mundo Loteria.png',
+    './images/Loteria Cards/El Apache Loteria.png',
+    './images/Loteria Cards/El Nopal Loteria.png',
+    './images/Loteria Cards/El Alacrán Loteria.png',
+    './images/Loteria Cards/La Rosa Loteria.png',
+    './images/Loteria Cards/La Calavera Loteria.png',
+    './images/Loteria Cards/La Campana Loteria.png',
+    './images/Loteria Cards/El Cantarito Loteria.png',
+    './images/Loteria Cards/El Venado Loteria.png',
+    './images/Loteria Cards/El Sol Loteria.png',
+    './images/Loteria Cards/La Corona Loteria.png',
+    './images/Loteria Cards/La Chalupa Loteria.png',
+    './images/Loteria Cards/El Pino Loteria.png',
+    './images/Loteria Cards/El Pescado Loteria.png',
+    './images/Loteria Cards/La Palma Loteria.png',
+    './images/Loteria Cards/La Maceta Loteria.png',
+    './images/Loteria Cards/El Arpa Loteria.png',
+    './images/Loteria Cards/La Rana Loteria.png'
+]
+
 // function to create array with random non-repeating numbers with the length of the argument
 function randomArray(length) {
     let randArray = [];
@@ -304,12 +363,20 @@ generateTablet(firstTablet);
 generateTablet(secondTablet);
 generateTablet(thirdTablet);
 generateTablet(fourthTablet);
-generateTablet(playerTablet);
 
 setInterval(() => {
     generateTablet(firstTablet);
     generateTablet(secondTablet);
     generateTablet(thirdTablet);
     generateTablet(fourthTablet);
-}, 8000);
+}, 8600);
 
+card1.src = cardPNGs[Math.floor(Math.random() * 54)];
+card2.src = cardPNGs[Math.floor(Math.random() * 54)];
+card3.src = cardPNGs[Math.floor(Math.random() * 54)];
+
+setInterval(() => {
+    card1.src = cardPNGs[Math.floor(Math.random() * 54)];
+    card2.src = cardPNGs[Math.floor(Math.random() * 54)];
+    card3.src = cardPNGs[Math.floor(Math.random() * 54)];
+}, 6400);

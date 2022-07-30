@@ -21,12 +21,12 @@ a:hover {
     transform: scale(1.05);
 }
 
-#homepage {
+body {
     background-image: url(/images/bg-images/640px.jpg);
     background-size: cover;
     font-size: 24px;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 #card-border {
@@ -113,10 +113,6 @@ a:hover {
     transform: rotate(-14.09deg);
 }
 
-#player-tablet-1 {
-    position: absolute;
-}
-
 .flex-center {
     display: flex;
     justify-content: center;
@@ -125,7 +121,7 @@ a:hover {
 
 .bg-el {
     z-index: -10;
-    position: absolute;
+    position: fixed;
 }
 
 .bg-el-left img {
@@ -161,18 +157,13 @@ a:hover {
     border: 2px solid black;
 }
 
-.tablet-block:active {
-    transform: scale(.9);
-    border: 5px solid red;
-    outline: 5px solid rgb(255, 255, 255);
-    box-shadow: 0 0 10px 10px green;
-    filter: brightness(120%);
+.unavailable {
+    color: hsl(85, 26%, 65%);
+    cursor: default;
 }
 
-.clicked {
-    transform: scale(.9);
-    border: 5px solid red;
-    outline: 5px solid rgb(255, 255, 255);
-    box-shadow: 0 0 5px 10px green;
-    filter: brightness(120%);
+.unavailable:hover {
+    color: hsl(85, 26%, 65%);
+    -webkit-text-stroke: 0px;
+    transform: scale(1);
 }
