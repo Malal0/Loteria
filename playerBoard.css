@@ -24,6 +24,8 @@ a:hover {
 
 body {
     background-image: url(/images/bg-images/640px.jpg);
+    height: 100vh;
+    object-fit: cover;
 }
 
 #main {
@@ -32,11 +34,11 @@ body {
     height: 100vh;
     overflow-x: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     gap: 2em;
-    margin: 2em 0;
+    padding: 1em 0;
 }
 
 #card-border {
@@ -71,7 +73,8 @@ body {
 .tablet {
     /* height: 783.52px;
     width: 530.08px; */
-    width: 90%;
+    max-width: 90%;
+    min-width: 280px;
     aspect-ratio: 1/1.478;
     margin: auto;
     border-radius: 3px;
@@ -112,13 +115,18 @@ body {
 #newCard {
     aspect-ratio: 1.496;
     font-size: 32px;
-    padding: 10px 15px;
+    padding: 10px;
     border: 2px solid black;
     outline: .4em solid hsl(29, 47%, 90%);
     background-color: hsl(85, 26%, 80%);
+    min-width: fit-content;
 }
 
 #newCard:hover {
     filter: brightness(110%);
     transform: scale(1.03);
+}
+
+@media (min-width: 401px) {
+    #newCard {}
 }
