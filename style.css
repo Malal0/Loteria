@@ -222,3 +222,7 @@ body {
     filter: brightness(95%);
     box-shadow: -6px 16px 16px 19px rgb(0, 0, 0, .5);
 }
+
+#del-after {
+    margin: 4em auto;
+}
