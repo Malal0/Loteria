@@ -21,274 +21,331 @@ const cards = [
     {
         name: 'El gallo',
         number: 1,
-        image: './images/Loteria Cards/jpegs/El Gallo Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Gallo Loteria-min.jpg'
     },
     {
         name: 'El diablito',
         number: 2,
-        image: './images/Loteria Cards/jpegs/El Diablito Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Diablito Loteria-min.jpg'
     },
     {
         name: 'La dama',
         number: 3,
-        image: './images/Loteria Cards/jpegs/La Dama Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Dama Loteria-min.jpg'
     },
     {
         name: 'El catrín',
         number: 4,
-        image: './images/Loteria Cards/jpegs/El Catrín Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Catrín Loteria-min.jpg'
     },
     {
         name: 'El paraguas',
         number: 5,
-        image: './images/Loteria Cards/jpegs/El Paraguas Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Paraguas Loteria-min.jpg'
     },
     {
         name: 'La sirena',
         number: 6,
-        image: './images/Loteria Cards/jpegs/La Sirena Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Sirena Loteria-min.jpg'
     },
     {
         name: 'La escalera',
         number: 7,
-        image: './images/Loteria Cards/jpegs/La Escalera Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Escalera Loteria-min.jpg'
     },
     {
         name: 'La botella',
         number: 8,
-        image: './images/Loteria Cards/jpegs/La Botella Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Botella Loteria-min.jpg'
     },
     {
         name: 'El barril',
         number: 9,
-        image: './images/Loteria Cards/jpegs/El Barril Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Barril Loteria-min.jpg'
     },
     {
         name: 'El árbol',
         number: 10,
-        image: './images/Loteria Cards/jpegs/El Árbol Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Árbol Loteria-min.jpg'
     },
     {
         name: 'El melón',
         number: 11,
-        image: './images/Loteria Cards/jpegs/El Melón Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Melón Loteria-min.jpg'
     },
     {
         name: 'El valiente',
         number: 12,
-        image: './images/Loteria Cards/jpegs/El Valiente Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Valiente Loteria-min.jpg'
     },
     {
         name: 'El gorrito',
         number: 13,
-        image: './images/Loteria Cards/jpegs/El Gorrito Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Gorrito Loteria-min.jpg'
     },
     {
         name: 'La muerte',
         number: 14,
-        image: './images/Loteria Cards/jpegs/La Muerte Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Muerte Loteria-min.jpg'
     },
     {
         name: 'La pera',
         number: 15,
-        image: './images/Loteria Cards/jpegs/La Pera Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Pera Loteria-min.jpg'
     },
     {
         name: 'La bandera',
         number: 16,
-        image: './images/Loteria Cards/jpegs/La Bandera Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Bandera Loteria-min.jpg'
     },
     {
         name: 'El bandolón',
         number: 17,
-        image: './images/Loteria Cards/jpegs/El Bandolón Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Bandolón Loteria-min.jpg'
     },
     {
         name: 'El violoncello',
         number: 18,
-        image: './images/Loteria Cards/jpegs/El Violoncello Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Violoncello Loteria-min.jpg'
     },
     {
         name: 'La garza',
         number: 19,
-        image: './images/Loteria Cards/jpegs/La Garza Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Garza Loteria-min.jpg'
     },
     {
         name: 'El pájaro',
         number: 20,
-        image: './images/Loteria Cards/jpegs/El Pájaro Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Pájaro Loteria-min.jpg'
     },
     {
         name: 'La mano',
         number: 21,
-        image: './images/Loteria Cards/jpegs/La Mano Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Mano Loteria-min.jpg'
     },
     {
         name: 'La bota',
         number: 22,
-        image: './images/Loteria Cards/jpegs/La Bota Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Bota Loteria-min.jpg'
     },
     {
         name: 'La luna',
         number: 23,
-        image: './images/Loteria Cards/jpegs/La Luna Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Luna Loteria-min.jpg'
     },
     {
         name: 'El cotorro',
         number: 24,
-        image: './images/Loteria Cards/jpegs/El Cotorro Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Cotorro Loteria-min.jpg'
     },
     {
         name: 'El borracho',
         number: 25,
-        image: './images/Loteria Cards/jpegs/El Borracho Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Borracho Loteria-min.jpg'
     },
     {
         name: 'El negrito',
         number: 26,
-        image: './images/Loteria Cards/jpegs/El Negrito Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Negrito Loteria-min.jpg'
     },
     {
         name: 'El corazón',
         number: 27,
-        image: './images/Loteria Cards/jpegs/El Corazón Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Corazón Loteria-min.jpg'
     },
     {
         name: 'La sandía',
         number: 28,
-        image: './images/Loteria Cards/jpegs/La Sandía Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Sandía Loteria-min.jpg'
     },
     {
         name: 'El tambor',
         number: 29,
-        image: './images/Loteria Cards/jpegs/El Tambor Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Tambor Loteria-min.jpg'
     },
     {
         name: 'El camarón',
         number: 30,
-        image: './images/Loteria Cards/jpegs/El Camarón Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Camarón Loteria-min.jpg'
     },
     {
         name: 'Las jaras',
         number: 31,
-        image: './images/Loteria Cards/jpegs/Las jaras Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/Las jaras Loteria-min.jpg'
     },
     {
         name: 'El músico',
         number: 32,
-        image: './images/Loteria Cards/jpegs/El Músico Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Músico Loteria-min.jpg'
     },
     {
         name: 'La araña',
         number: 33,
-        image: './images/Loteria Cards/jpegs/La Araña Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Araña Loteria-min.jpg'
     },
     {
         name: 'El soldado',
         number: 34,
-        image: './images/Loteria Cards/jpegs/El Soldado Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Soldado Loteria-min.jpg'
     },
     {
         name: 'La estrella',
         number: 35,
-        image: './images/Loteria Cards/jpegs/La Estrella Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Estrella Loteria-min.jpg'
     },
     {
         name: 'El cazo',
         number: 36,
-        image: './images/Loteria Cards/jpegs/El Cazo Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Cazo Loteria-min.jpg'
     },
     {
         name: 'El mundo',
         number: 37,
-        image: './images/Loteria Cards/jpegs/El Mundo Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Mundo Loteria-min.jpg'
     },
     {
         name: 'El Apache',
         number: 38,
-        image: './images/Loteria Cards/jpegs/El Apache Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Apache Loteria-min.jpg'
     },
     {
         name: 'El nopal',
         number: 39,
-        image: './images/Loteria Cards/jpegs/El Nopal Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Nopal Loteria-min.jpg'
     },
     {
         name: 'El alacrán',
         number: 40,
-        image: './images/Loteria Cards/jpegs/El Alacrán Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Alacrán Loteria-min.jpg'
     },
     {
         name: 'La rosa',
         number: 41,
-        image: './images/Loteria Cards/jpegs/La Rosa Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Rosa Loteria-min.jpg'
     },
     {
         name: 'La calavera',
         number: 42,
-        image: './images/Loteria Cards/jpegs/La Calavera Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Calavera Loteria-min.jpg'
     },
     {
         name: 'La campana',
         number: 43,
-        image: './images/Loteria Cards/jpegs/La Campana Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Campana Loteria-min.jpg'
     },
     {
         name: 'El cantarito',
         number: 44,
-        image: './images/Loteria Cards/jpegs/El Cantarito Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Cantarito Loteria-min.jpg'
     },
     {
         name: 'El venado',
         number: 45,
-        image: './images/Loteria Cards/jpegs/El Venado Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Venado Loteria-min.jpg'
     },
     {
         name: 'El Sol',
         number: 46,
-        image: './images/Loteria Cards/jpegs/El Sol Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Sol Loteria-min.jpg'
     },
     {
         name: 'La corona',
         number: 47,
-        image: './images/Loteria Cards/jpegs/La Corona Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Corona Loteria-min.jpg'
     },
     {
         name: 'La chalupa',
         number: 48,
-        image: './images/Loteria Cards/jpegs/La Chalupa Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Chalupa Loteria-min.jpg'
     },
     {
         name: 'El pino',
         number: 49,
-        image: './images/Loteria Cards/jpegs/El Pino Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Pino Loteria-min.jpg'
     },
     {
         name: 'El pescado',
         number: 50,
-        image: './images/Loteria Cards/jpegs/El Pescado Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Pescado Loteria-min.jpg'
     },
     {
         name: 'La palma',
         number: 51,
-        image: './images/Loteria Cards/jpegs/La Palma Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Palma Loteria-min.jpg'
     },
     {
         name: 'La maceta',
         number: 52,
-        image: './images/Loteria Cards/jpegs/La Maceta Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Maceta Loteria-min.jpg'
     },
     {
         name: 'El arpa',
         number: 53,
-        image: './images/Loteria Cards/jpegs/El Arpa Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/El Arpa Loteria-min.jpg'
     },
     {
         name: 'La rana',
         number: 54,
-        image: './images/Loteria Cards/jpegs/La Rana Loteria.jpg'
+        image: './images/Loteria Cards/CompressedCardBorderless/La Rana Loteria-min.jpg'
     }
 ];
+
+const cardPNGs = [
+    './images/Loteria Cards/CompressedCardswithBorder/El Gallo Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Diablito Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Dama Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Catrín Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Paraguas Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Sirena Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Escalera Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Botella Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Barril Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Árbol Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Melón Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Valiente Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Gorrito Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Muerte Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Pera Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Bandera Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Bandolón Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Violoncello Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Garza Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Pájaro Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Mano Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Bota Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Luna Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Cotorro Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Borracho Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Negrito Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Corazón Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Sandía Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Tambor Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Camarón Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/Las jaras Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Músico Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Araña Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Soldado Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Estrella Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Cazo Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Mundo Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Apache Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Nopal Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Alacrán Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Rosa Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Calavera Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Campana Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Cantarito Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Venado Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Sol Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Corona Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Chalupa Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Pino Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Pescado Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Palma Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Maceta Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/El Arpa Loteria-min.png',
+    './images/Loteria Cards/CompressedCardswithBorder/La Rana Loteria-min.png'
+]
 //  the new randomized order of numbers from 1-54
 let newCardsArray = [];
 let order = 0;
@@ -317,7 +374,7 @@ function generateCard() {
     cardSelected = cards[newCardsArray[order]];
     index = cardSelected.number;
     text = cardSelected.name;
-    image = cardSelected.image;
+    image = cardPNGs[index - 1];
 
     pushCurrentCard();
 
@@ -347,15 +404,14 @@ function pushCurrentCard() {
 }
 
 function displayPrevCards(number) {
-    const newDiv = document.createElement("div");
-    //const newImg = newDiv.createElement("img");
+    const newImg = document.createElement("img");
+    // const newImg = newDiv.createElement("img");
 
-    newDiv.textContent = number;
-    //newImg.src = image;
-    //prevCard.appendChild(newDiv);
-    prevCard.insertBefore(newDiv, prevCard.firstElementChild);
-    newDiv.className = "blankCard";
-    // console.log(newImg);
+    newImg.textContent = number;
+    newImg.src = cardPNGs[number - 1];
+    newImg.alt = text;
+    prevCard.insertBefore(newImg, prevCard.firstElementChild);
+    newImg.className = "blankCard";
 }
 
 nextBtn.addEventListener("click", generateCard);
