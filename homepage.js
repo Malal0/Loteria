@@ -371,10 +371,6 @@ setInterval(() => {
     generateTablet(fourthTablet);
 }, 8600);
 
-card1.src = cardPNGs[Math.floor(Math.random() * 54)];
-card2.src = cardPNGs[Math.floor(Math.random() * 54)];
-card3.src = cardPNGs[Math.floor(Math.random() * 54)];
-
 setInterval(() => {
     card1.src = cardPNGs[Math.floor(Math.random() * 54)];
     card2.src = cardPNGs[Math.floor(Math.random() * 54)];
