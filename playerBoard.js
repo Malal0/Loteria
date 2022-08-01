@@ -282,8 +282,6 @@ let storedArray = [];
 
 if (localStorage.getItem("savedBoard")) {
     storedArray = JSON.parse(localStorage.getItem("savedBoard"));
-} else {
-    console.log(false);
 };
 
 function randomArray(length) {
@@ -331,5 +329,9 @@ newCard.addEventListener("click", () => { generateTablet(playerTablet) });
 clearCard.addEventListener("click", () => { clearPlayerBoard(playerTablet) });
 
 saveCard.addEventListener("click", () => {
-    localStorage.setItem("savedBoard", JSON.stringify(newArray));
+    if (newArray.length === 0) {
+        return
+    } else {
+        localStorage.setItem("savedBoard", JSON.stringify(newArray));
+    }
 });
