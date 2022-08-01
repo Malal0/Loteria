@@ -1,5 +1,7 @@
 const playerTablet = document.getElementById("player-tablet-1");
 const newCard = document.getElementById("newCard");
+const saveCard = document.getElementById("saveCard");
+const clearCard = document.getElementById("clearCard");
 
 //  original array of all cards
 const cards = [
@@ -275,7 +277,15 @@ const cards = [
     }
 ];
 
-// function to create array with random non-repeating numbers with the length of the argument
+let newArray = [];
+let storedArray = [];
+
+if (localStorage.getItem("savedBoard")) {
+    storedArray = JSON.parse(localStorage.getItem("savedBoard"));
+} else {
+    console.log(false);
+};
+
 function randomArray(length) {
     let randArray = [];
     for (let i = 0; i < length; i++) {
@@ -295,11 +305,16 @@ function generateTablet(domEl) {
     for (let i = 0; i < 16; i++) {
         domEl.innerHTML += `<img class="tablet-block" src='${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
     }
+    newArray = playerCard1;
 }
-// finish above. make player card appear.
-generateTablet(playerTablet);
 
-newCard.addEventListener("click", () => { generateTablet(playerTablet) });
+if (storedArray.length === 0) {
+    generateTablet(playerTablet);
+} else {
+    for (let i = 0; i < 16; i++) {
+        playerTablet.innerHTML += `<img class="tablet-block" src='${cards[storedArray[i]].image}' alt='${cards[storedArray[i]].image}'/>`
+    }
+};
 
 addEventListener("click", (e) => {
     if (e.target.classList.contains("tablet-block")) {
@@ -307,3 +322,14 @@ addEventListener("click", (e) => {
     }
 });
 
+function clearPlayerBoard(currentTablet) {
+    currentTablet.childNodes.forEach(block => block.classList.contains("clicked") ? block.classList.remove("clicked") : "");
+}
+
+newCard.addEventListener("click", () => { generateTablet(playerTablet) });
+
+clearCard.addEventListener("click", () => { clearPlayerBoard(playerTablet) });
+
+saveCard.addEventListener("click", () => {
+    localStorage.setItem("savedBoard", JSON.stringify(newArray));
+});

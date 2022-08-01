@@ -113,6 +113,18 @@ body {
     filter: brightness(120%);
 }
 
+#buttons {
+    width: 70%;
+    /* display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 12.5%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 1em;
+}
+
 #newCard {
     aspect-ratio: 1.496;
     font-size: 32px;
