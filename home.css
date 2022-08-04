@@ -32,7 +32,7 @@ body {
 #card-border {
     /* width: 288.56px;
     height: 444px; */
-    width: clamp(270px, 90%, 500px);
+    width: clamp(270px, 90%, 405px);
     background-color: hsl(29, 47%, 90%);
     margin: auto;
     text-align: center;
@@ -172,4 +172,17 @@ body {
     color: hsl(85, 26%, 65%);
     -webkit-text-stroke: 0px;
     transform: scale(1);
+}
+
+@media(min-width: 1024px) {
+    .bg-el-left img {
+        width: 375px;
+        height: 561px;
+        border-radius: 25px;
+    }
+
+    .tablet {
+        width: 761px;
+        height: 1137px;
+    }
 }
