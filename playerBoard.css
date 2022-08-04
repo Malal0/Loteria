@@ -137,12 +137,14 @@ body {
     box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5)
 }
 
-#newCard:hover {
+#newCard:hover,
+.button:hover {
     filter: brightness(110%);
     transform: scale(1.03);
 }
 
-#newCard:active {
+#newCard:active,
+.button:active {
     filter: brightness(95%);
     box-shadow: -6px 16px 16px 19px rgb(0, 0, 0, .5);
 }
