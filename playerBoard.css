@@ -125,7 +125,8 @@ body {
     gap: 1em;
 }
 
-#newCard {
+#newCard,
+.button {
     aspect-ratio: 1.496;
     font-size: 32px;
     padding: 11px;
