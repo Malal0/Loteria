@@ -16,6 +16,7 @@
 html {
     /* background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-H7u2q3ZwCH8%2FXVhffeJ31qI%2FAAAAAAAAMCQ%2F2ffqKbzMDpkUGj8bvg6FpvXerlkHIH5iwCEwYBhgL%2Fs1600%2Fpaper_seamless_dirty_white_texture3.jpg&f=1&nofb=1"); */
     background-image: url(./images/bg-images/640px.jpg);
+    object-fit: cover;
 }
 
 body {
