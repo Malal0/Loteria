@@ -209,6 +209,42 @@ body {
     filter: brightness(120%);
 }
 
+/* new */
+.tablet {
+    /* height: 783.52px;
+    width: 530.08px; */
+    max-width: 90%;
+    min-width: 280px;
+    aspect-ratio: 1/1.478;
+    margin: auto;
+    border-radius: 3px;
+    background-color: hsl(29, 47%, 90%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /* gap: 17.23px;
+    padding: 17.23px; */
+    gap: .25em;
+    padding: .25em;
+    box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
+}
+
+.tablet-block {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.tablet-block:active {
+    transform: scale(.9);
+    border: 5px solid red;
+    outline: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px 10px green;
+    filter: brightness(120%);
+}
+
+/* */
 #newCard {
     aspect-ratio: 1.496;
     font-size: 32px;
