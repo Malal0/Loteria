@@ -374,7 +374,7 @@ function generateCard() {
     cardSelected = cards[newCardsArray[order]];
     index = cardSelected.number;
     text = cardSelected.name;
-    image = cardPNGs[index - 1];
+    image = "." + cardPNGs[index - 1];
 
     pushCurrentCard();
 
@@ -408,7 +408,7 @@ function displayPrevCards(number) {
     // const newImg = newDiv.createElement("img");
 
     newImg.textContent = number;
-    newImg.src = cardPNGs[number - 1];
+    newImg.src = "." + cardPNGs[number - 1];
     newImg.alt = text;
     prevCard.insertBefore(newImg, prevCard.firstElementChild);
     newImg.className = "blankCard";
@@ -457,7 +457,7 @@ function generateTablet(domEl) {
     domEl.innerHTML = "";
     let playerCard1 = randomArray(16);
     for (let i = 0; i < 16; i++) {
-        domEl.innerHTML += `<img class="playerCard-block" src='${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
+        domEl.innerHTML += `<img class="playerCard-block" src='.${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
     }
 }
 // finish above. make player card appear.
