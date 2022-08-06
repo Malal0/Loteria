@@ -301,7 +301,7 @@ function generateTablet(domEl) {
     domEl.innerHTML = "";
     let playerCard1 = randomArray(16);
     for (let i = 0; i < 16; i++) {
-        domEl.innerHTML += `<img class="tablet-block" src='${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
+        domEl.innerHTML += `<img class="tablet-block" src='.${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
     }
     newArray = playerCard1;
 }
@@ -310,7 +310,7 @@ if (storedArray.length === 0) {
     generateTablet(playerTablet);
 } else {
     for (let i = 0; i < 16; i++) {
-        playerTablet.innerHTML += `<img class="tablet-block" src='${cards[storedArray[i]].image}' alt='${cards[storedArray[i]].image}'/>`
+        playerTablet.innerHTML += `<img class="tablet-block" src='.${cards[storedArray[i]].image}' alt='${cards[storedArray[i]].image}'/>`
     }
 };
 
