@@ -355,7 +355,7 @@ function generateTablet(domEl) {
     domEl.innerHTML = "";
     let playerCard1 = randomArray(16);
     for (let i = 0; i < 16; i++) {
-        domEl.innerHTML += `<img class="tablet-block" src='${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
+        domEl.innerHTML += `<img class="tablet-block" src='.${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
     }
 }
 // finish above. make player card appear.
@@ -372,7 +372,7 @@ setInterval(() => {
 }, 8600);
 
 setInterval(() => {
-    card1.src = cardPNGs[Math.floor(Math.random() * 54)];
-    card2.src = cardPNGs[Math.floor(Math.random() * 54)];
-    card3.src = cardPNGs[Math.floor(Math.random() * 54)];
+    card1.src = "." + cardPNGs[Math.floor(Math.random() * 54)];
+    card2.src = "." + cardPNGs[Math.floor(Math.random() * 54)];
+    card3.src = "." + cardPNGs[Math.floor(Math.random() * 54)];
 }, 6400);
