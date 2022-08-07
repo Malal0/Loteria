@@ -172,7 +172,7 @@ body {
 }
 
 /*  playerCard  */
-#playerCard {
+/* #playerCard {
     aspect-ratio: 10/16;
     background-color: #16181e;
     margin: 10vh auto;
@@ -181,7 +181,7 @@ body {
     grid-template-rows: repeat(4, 1fr);
     gap: 1em;
     padding: 1em;
-}
+} */
 
 .playerCard-block {
     background-color: rgb(240, 240, 240);
