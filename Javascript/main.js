@@ -16,8 +16,12 @@ const cardImage = document.querySelector("#cardImg");
 //  the variable for the previousCards div
 const prevCard = document.querySelector("#previousCards");
 
-const playerTablet = document.getElementById("playerCard");
+const playerTablet = document.getElementById("player-tablet-1");
+const newCard = document.getElementById("newCard");
 const saveCard = document.getElementById("saveCard");
+const clearCard = document.getElementById("clearCard");
+let newArray = [];
+let storedArray = [];
 
 //  original array of all cards
 const cards = [
@@ -420,18 +424,17 @@ function displayPrevCards(number) {
 nextBtn.addEventListener("click", generateCard);
 shuffleBtn.addEventListener("click", shuffleCards);
 
-//need index of array and then change //
-
-function clicked() {
-    console.log(this);
-    console.log("clicked");
-};
-
-leftBtn.addEventListener("click", clicked);
-rightBtn.addEventListener("click", clicked);
+// leftBtn.addEventListener("click", clicked);
+// rightBtn.addEventListener("click", clicked);
 resetBtn.addEventListener("click", reset);
 
-// function to create array with random non-repeating numbers with the length of the argument
+
+/*  THE SECTION BELOW IS THE CODE FOR THE PLAYERTABLET */
+
+if (localStorage.getItem("savedBoard")) {
+    storedArray = JSON.parse(localStorage.getItem("savedBoard"));
+};
+
 function randomArray(length) {
     let randArray = [];
     for (let i = 0; i < length; i++) {
@@ -445,32 +448,34 @@ function randomArray(length) {
     return randArray;
 }
 
-const playerCard1 = randomArray(16);
-const playerCard = document.getElementById("playerCard");
-
-// below is for the player tablet
-
-addEventListener("click", (e) => {
-    if (e.target.classList.contains("playerCard-block")) {
-        e.target.classList.toggle("clicked");
-    }
-});
-
 function generateTablet(domEl) {
     domEl.innerHTML = "";
     let playerCard1 = randomArray(16);
     for (let i = 0; i < 16; i++) {
-        domEl.innerHTML += `<img class="playerCard-block" src='.${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
+        domEl.innerHTML += `<img class="tablet-block" src='.${cards[playerCard1[i]].image}' alt='${cards[playerCard1[i]].image}'/>`
     }
+    newArray = playerCard1;
 }
-// finish above. make player card appear.
-generateTablet(playerCard);
 
-newCard.addEventListener("click", () => { generateTablet(playerCard) });
+if (storedArray.length === 0) {
+    generateTablet(playerTablet);
+} else {
+    for (let i = 0; i < 16; i++) {
+        playerTablet.innerHTML += `<img class="tablet-block" src='.${cards[storedArray[i]].image}' alt='${cards[storedArray[i]].image}'/>`
+    }
+};
+
+addEventListener("click", (e) => {
+    if (e.target.classList.contains("tablet-block")) {
+        e.target.classList.toggle("clicked");
+    }
+});
 
 function clearPlayerBoard(currentTablet) {
     currentTablet.childNodes.forEach(block => block.classList.contains("clicked") ? block.classList.remove("clicked") : "");
 }
+
+newCard.addEventListener("click", () => { generateTablet(playerTablet) });
 
 clearCard.addEventListener("click", () => { clearPlayerBoard(playerTablet) });
 
