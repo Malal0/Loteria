@@ -17,6 +17,7 @@ const cardImage = document.querySelector("#cardImg");
 const prevCard = document.querySelector("#previousCards");
 
 const playerTablet = document.getElementById("playerCard");
+const saveCard = document.getElementById("saveCard");
 
 //  original array of all cards
 const cards = [
@@ -472,3 +473,11 @@ function clearPlayerBoard(currentTablet) {
 }
 
 clearCard.addEventListener("click", () => { clearPlayerBoard(playerTablet) });
+
+saveCard.addEventListener("click", () => {
+    if (newArray.length === 0) {
+        return
+    } else {
+        localStorage.setItem("savedBoard", JSON.stringify(newArray));
+    }
+});
