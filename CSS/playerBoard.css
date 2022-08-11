@@ -138,7 +138,8 @@ body {
 }
 
 #newCard:hover,
-.button:hover {
+.button:hover,
+.tablet-block:hover {
     filter: brightness(110%);
     transform: scale(1.03);
 }

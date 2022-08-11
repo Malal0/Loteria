@@ -201,13 +201,6 @@ body {
     filter: brightness(120%);
 }
 
-.clicked {
-    transform: scale(.9);
-    border: 5px solid red;
-    outline: 5px solid rgb(255, 255, 255);
-    box-shadow: 0 0 5px 10px green;
-    filter: brightness(120%);
-}
 
 /* new */
 .tablet {
@@ -245,7 +238,7 @@ body {
 }
 
 /* */
-#newCard {
+.button {
     aspect-ratio: 1.496;
     font-size: 32px;
     padding: 11px;
@@ -256,16 +249,33 @@ body {
     box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
 }
 
-#newCard:hover {
+.button:hover,
+.tablet-block:hover {
     filter: brightness(110%);
     transform: scale(1.03);
 }
 
-#newCard:active {
+.button:active {
     filter: brightness(95%);
     box-shadow: -6px 16px 16px 19px rgb(0, 0, 0, .5);
 }
 
-#del-after {
-    margin: 4em auto;
+.clicked {
+    transform: scale(.9);
+    border: 5px solid red;
+    outline: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px 10px green;
+    filter: brightness(120%);
+}
+
+#buttons {
+    width: 70%;
+    /* display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 12.5%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 1em;
 }
