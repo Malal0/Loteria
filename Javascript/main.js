@@ -4,9 +4,9 @@ const rightBtn = document.querySelector("#right-btn")
 const previousCards = document.querySelector("#previousCards");
 
 //  the variable for the button to go next
-const nextBtn = document.querySelector("#card-button");
-//  the variable for the randomize button
-const shuffleBtn = document.querySelector("#randomize-cards-button");
+const nextBtn = document.querySelector("#card-btn");
+//  the variable for the shuffle & restart button
+const shuffleBtn = document.querySelector("#shuffle-btn");
 //  the variable for the shuffle button
 const resetBtn = document.querySelector("#reset-button");
 //  the variables for the card being shown
@@ -354,7 +354,8 @@ const cardPNGs = [
     './images/Loteria Cards/CompressedCardswithBorder/La Rana Loteria-min.png'
 ]
 //  the new randomized order of numbers from 1-54
-let newCardsArray = [];
+// let newCardsArray = [];
+let newCardsArray = randomArray(54);
 let order = 0;
 //  the array of cards that have been used
 let previousCardsArray = [];
@@ -365,15 +366,15 @@ function currentCard(number, name, image) {
 }
 //
 function shuffleCards() {
-    //newCardsArray = [];
-    for (let i = 0; i < cards.length; i++) {
-        let rand = Math.floor(Math.random() * 54)
-        if (!newCardsArray.includes(rand)) {
-            newCardsArray.push(rand);
-        } else if (newCardsArray.includes(rand) && newCardsArray.length < 54) {
-            i--;
-        }
-    };
+    // for (let i = 0; i < cards.length; i++) {
+    //     let rand = Math.floor(Math.random() * 54)
+    //     if (!newCardsArray.includes(rand)) {
+    //         newCardsArray.push(rand);
+    //     } else if (newCardsArray.includes(rand) && newCardsArray.length < 54) {
+    //         i--;
+    //     }
+    // };
+    newCardsArray = randomArray(54);
     console.log(newCardsArray);
 }
 
@@ -391,19 +392,20 @@ function generateCard() {
 };
 
 function change() {
-    cardName.innerHTML = text;
-    cardNumber.innerHTML = index;
+    // cardName.innerHTML = text;
+    // cardNumber.innerHTML = index;
     cardImage.src = image;
 };
 
 function reset() {
     order = 0;
     newCardsArray = [];
-    cardName.innerHTML = "";
-    cardNumber.innerHTML = "";
+    // cardName.innerHTML = "";
+    // cardNumber.innerHTML = "";
     cardImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F7777713%2Fr%2Fil%2Fdbfe20%2F1686069708%2Fil_794xN.1686069708_93k9.jpg&amp;f=1&amp;nofb=1";
     previousCardsArray = [];
     previousCards.innerHTML = "";
+    shuffleCards();
 }
 
 function pushCurrentCard() {
@@ -422,11 +424,10 @@ function displayPrevCards(number) {
 }
 
 nextBtn.addEventListener("click", generateCard);
-shuffleBtn.addEventListener("click", shuffleCards);
+shuffleBtn.addEventListener("click", reset);
 
 // leftBtn.addEventListener("click", clicked);
 // rightBtn.addEventListener("click", clicked);
-resetBtn.addEventListener("click", reset);
 
 
 /*  THE SECTION BELOW IS THE CODE FOR THE PLAYERTABLET */
