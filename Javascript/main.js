@@ -14,7 +14,9 @@ const cardNumber = document.querySelector("#number");
 const cardName = document.querySelector("#name");
 const cardImage = document.querySelector("#cardImg");
 //  the variable for the previousCards div
-const prevCard = document.querySelector("#previousCards")
+const prevCard = document.querySelector("#previousCards");
+
+const playerTablet = document.getElementById("playerCard");
 
 //  original array of all cards
 const cards = [
@@ -464,3 +466,9 @@ function generateTablet(domEl) {
 generateTablet(playerCard);
 
 newCard.addEventListener("click", () => { generateTablet(playerCard) });
+
+function clearPlayerBoard(currentTablet) {
+    currentTablet.childNodes.forEach(block => block.classList.contains("clicked") ? block.classList.remove("clicked") : "");
+}
+
+clearCard.addEventListener("click", () => { clearPlayerBoard(playerTablet) });
