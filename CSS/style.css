@@ -110,9 +110,9 @@ body {
     width: fit-content;
     border: 1px solid red;
     gap: 1em;
-    position: absolute;
+    /* position: absolute;
     right: 0;
-    top: 90px;
+    top: 90px; */
 }
 
 .round-btn {
@@ -154,7 +154,45 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.bleh {
+    display: flex;
+    justify-content: space-between;
+}
+
 /*  IDs */
+
+#previousCardsContainer {
+    margin-bottom: 1em;
+}
+
+#menu-bars {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #16181e;
+}
+
+.menu-bar {
+    width: 100%;
+    height: 7px;
+    background-color: var(--lightYellow);
+    border: 2px solid black;
+}
+
+#first-bar {
+    transform: translateY(14px);
+    opacity: .1;
+}
+
+#sec-bar {
+    transform: rotate(45deg) translateX(0px) translateY(0px);
+}
+
+#third-bar {
+    transform: rotate(-45deg) translateX(10px) translateY(-10px);
+}
 
 #left-btn {
     position: absolute;
@@ -300,7 +338,10 @@ body {
 }
 
 #card-btn {
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em auto;
 }
 
 #shuffle-btn {
