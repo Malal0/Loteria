@@ -12,6 +12,7 @@
 
 :root {
     --lightYellow: #f1e4d8;
+    --lightGreen: #e6ffda;
 }
 
 /*  Global  */
@@ -349,4 +350,33 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90%;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--lightGreen);
+    padding: 1em 0;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin: 1em;
+    gap: 1em;
+}
+
+/*  overlay menu    */
+#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--lightGreen);
+}
+
+.displayOff {
+    display: none;
 }
