@@ -184,6 +184,17 @@ body {
     transition: cubic-bezier(0.53, -0.31, 0.46, 1.28) 500ms;
 }
 
+.menu-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20%;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
 #left-btn {
     position: absolute;
     left: 0;
