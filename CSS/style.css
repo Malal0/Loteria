@@ -54,12 +54,12 @@ body {
 .prev-card-container button {
     height: 100%;
     aspect-ratio: 1/1.914;
-    background-image: url(../images/buttons/Left\ btn-min.png);
-    background-size: cover;
+    background-image: url(../images/buttons/Left\ btn.svg);
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 3px;
     border: 2px solid black;
+    background-size: 110%;
 }
 
 .prev-card-container button:hover {
@@ -191,8 +191,22 @@ body {
     justify-content: center;
     height: 100vh;
     gap: 20%;
+}
+
+.menu-links-container a,
+.link {
+    color: black;
     font-size: 24px;
     text-transform: capitalize;
+    font-weight: 600;
+    -webkit-text-stroke: 1px #00000000;
+}
+
+.menu-links-container a:hover,
+.menu-links-container a:active,
+.link:hover,
+.link:active {
+    -webkit-text-stroke: 1px var(--lightYellow);
 }
 
 #left-btn {
@@ -286,6 +300,8 @@ body {
     width: 100%;
     object-fit: cover;
     border: 2px solid black;
+    outline: 5px solid #ffffff00;
+    box-shadow: 0 0 10px 10px #ffffff00;
 }
 
 .tablet-block:active {
@@ -347,10 +363,35 @@ body {
 }
 
 #shuffle-btn {
-    background-image: url(../images/buttons/shuffle\ symbol.png);
+    background-image: url(../images/buttons/Shuffle\ btn.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90%;
+}
+
+#speech-btn {
+    background-image: url(../images/buttons/Speech\ btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+#timer-btn {
+    background-image: url(../images/buttons/Timer\ btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+#play-pause-btn {
+    background-image: url(../images/buttons/Play\ btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+}
+
+.not-in-use {
+    filter: blur(2px);
 }
 
 footer {
@@ -363,7 +404,6 @@ footer {
     display: flex;
     flex-direction: column;
     text-transform: capitalize;
-    font-size: 24px;
     margin: 1em;
     gap: 1em;
 }
