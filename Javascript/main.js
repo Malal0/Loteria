@@ -487,3 +487,6 @@ saveCard.addEventListener("click", () => {
         localStorage.setItem("savedBoard", JSON.stringify(newArray));
     }
 });
+
+/*  code for menu overlay   */
+const menuBtn = document.getElementById("menu-bars");

@@ -173,6 +173,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
     background-color: #16181e;
+    z-index: 10;
 }
 
 .menu-bar {
