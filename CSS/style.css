@@ -172,8 +172,8 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: #16181e;
     z-index: 10;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 }
 
 .menu-bar {
@@ -181,19 +181,7 @@ body {
     height: 7px;
     background-color: var(--lightYellow);
     border: 2px solid black;
-}
-
-#first-bar {
-    transform: translateY(14px);
-    opacity: .1;
-}
-
-#sec-bar {
-    transform: rotate(45deg) translateX(0px) translateY(0px);
-}
-
-#third-bar {
-    transform: rotate(-45deg) translateX(10px) translateY(-10px);
+    transition: cubic-bezier(0.53, -0.31, 0.46, 1.28) 500ms;
 }
 
 #left-btn {
@@ -371,14 +359,32 @@ footer {
 
 /*  overlay menu    */
 #menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: var(--lightGreen);
+    overflow-x: hidden;
 }
 
 .displayOff {
     display: none;
+}
+
+.menuOpen {
+    transform: translateY(-84px);
+}
+
+.menuOpen #first-bar {
+    transform: translateY(14px);
+    opacity: 0;
+}
+
+.menuOpen #sec-bar {
+    transform: rotate(45deg) translateX(0px) translateY(0px);
+}
+
+.menuOpen #third-bar {
+    transform: rotate(-45deg) translateX(10px) translateY(-10px);
 }

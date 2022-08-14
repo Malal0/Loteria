@@ -490,6 +490,13 @@ saveCard.addEventListener("click", () => {
 
 /*  code for menu overlay   */
 const menuBtn = document.getElementById("menu-bars");
+menuBtn.addEventListener("click", () => {
+    const menuBtn = document.getElementById("menu-bars");
+    const menuOverlay = document.getElementById("menu");
+    menuBtn.classList.toggle("menuOpen");
+    menuOverlay.classList.toggle("displayOff");
+    console.log("clicked");
+})
 
 /*  code for previous cards container scroll effect   */
 leftBtn.addEventListener("click", () => { previousCards.scrollLeft += previousCards.clientWidth - 38.56 / 2 });
