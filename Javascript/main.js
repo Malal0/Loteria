@@ -492,8 +492,5 @@ saveCard.addEventListener("click", () => {
 const menuBtn = document.getElementById("menu-bars");
 
 /*  code for previous cards container scroll effect   */
-leftBtn.addEventListener("click", () => { previousCards.scrollLeft += 200 });
-rightBtn.addEventListener("click", () => {
-    previousCards.scrollLeft -= 200
-    console.log(previousCards.scrollRight)
-});
+leftBtn.addEventListener("click", () => { previousCards.scrollLeft += previousCards.clientWidth - 38.56 / 2 });
+rightBtn.addEventListener("click", () => { previousCards.scrollLeft -= previousCards.clientWidth - 38.56 });
