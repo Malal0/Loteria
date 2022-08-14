@@ -216,6 +216,7 @@ body {
     align-items: center;
     overflow: auto;
     justify-content: baseline;
+    scroll-behavior: smooth;
 }
 
 #previousCards::-webkit-scrollbar {

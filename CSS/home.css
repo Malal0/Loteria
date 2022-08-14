@@ -25,7 +25,7 @@ body {
     background-image: url(/images/bg-images/640px.jpg);
     background-size: cover;
     font-size: 24px;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 #homepage {
