@@ -399,3 +399,8 @@ footer {
 .menuOpen #third-bar {
     transform: rotate(-45deg) translateX(10px) translateY(-10px);
 }
+
+.smol {
+    height: 100vh;
+    overflow: hidden;
+}

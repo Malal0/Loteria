@@ -495,6 +495,7 @@ menuBtn.addEventListener("click", () => {
     const menuOverlay = document.getElementById("menu");
     menuBtn.classList.toggle("menuOpen");
     menuOverlay.classList.toggle("displayOff");
+    document.querySelector("body").classList.toggle("smol");
     console.log("clicked");
 })
 
