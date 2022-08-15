@@ -124,6 +124,16 @@ body {
     background-color: var(--lightYellow);
 }
 
+.round-btn:hover {
+    filter: brightness(1.1);
+    scale: 1.05;
+}
+
+.round-btn:active {
+    filter: brightness(.95);
+    scale: 0.95;
+}
+
 .card-img {
     z-index: -1;
     height: 100%;
