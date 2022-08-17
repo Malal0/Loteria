@@ -503,4 +503,6 @@ menuBtn.addEventListener("click", () => {
 leftBtn.addEventListener("click", () => { previousCards.scrollLeft += previousCards.clientWidth - 38.56 / 2 });
 rightBtn.addEventListener("click", () => { previousCards.scrollLeft -= previousCards.clientWidth - 38.56 });
 
-const timerBtn = getElementById("timer-btn");
+const timerBtn = document.getElementById("timer-btn");
+
+timerBtn.addEventListener('click', (e) => console.log`${e.target} was clicked`);
