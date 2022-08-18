@@ -508,3 +508,5 @@ const timerBtn = document.getElementById("timer-btn");
 timerBtn.addEventListener('click', (e) => console.log`${e.target} was clicked`);
 
 const playPauseBtn = document.getElementById("play-pause-btn");
+
+playPauseBtn.addEventListener('click', () => console.log('clicked play pause btn'));
