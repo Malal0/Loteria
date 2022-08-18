@@ -506,3 +506,5 @@ rightBtn.addEventListener("click", () => { previousCards.scrollLeft -= previousC
 const timerBtn = document.getElementById("timer-btn");
 
 timerBtn.addEventListener('click', (e) => console.log`${e.target} was clicked`);
+
+const playPauseBtn = document.getElementById("play-pause-btn");
