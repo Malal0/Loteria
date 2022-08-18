@@ -509,4 +509,24 @@ timerBtn.addEventListener('click', (e) => console.log`${e.target} was clicked`);
 
 const playPauseBtn = document.getElementById("play-pause-btn");
 
-playPauseBtn.addEventListener('click', () => console.log('clicked play pause btn'));
+playPauseBtn.addEventListener('click', () => {
+    const timerModal = document.createElement('div');
+    body.appendChild(timerModal);
+    if (!timerModalOn) {
+        timerModal.innerHTML += `
+    <section>
+        <p>How many seconds inbetween cards?</p>
+        <p>10s <input type="range"></p>
+    </section>
+    `
+        timerModalOn = true;
+    } else {
+        body.removeChild(timerModal);
+        timerModalOn = false;
+    }
+});
+
+const body = document.querySelector('body');
+
+let timerModalOn = false;
+
