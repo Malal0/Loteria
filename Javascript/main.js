@@ -512,16 +512,8 @@ playPauseBtn.addEventListener('click', () => {
     playModal.setAttribute('class', 'modal');
     playModal.innerHTML = `
         <p>The Game begins in <span id='countDownDisplay'>${countDownTime}</span>s</p>
-        <button class='cancel-Btn'  onclick='cancelCountDown(playModal, countDownInterval)'>CANCEL</button>
+        <button class='cancel-Btn'  onclick='removeModal(playModal)'>CANCEL</button>
     `
-
-    const interval = setInterval(countDown(Interval), 1000);
-
-    if (countDownTime <= 10) {
-        interval();
-    } else {
-        clearInterval(interval);
-    }
 });
 
 const timerBtn = document.getElementById("timer-btn");
@@ -542,17 +534,8 @@ function removeModal(modal) {
     body.removeChild(modal);
 }
 
-function countDown(interval) {
-    document.getElementById('countDownDisplay').textContent = countdown;
-    countdown--;
-    console.log(countdown);
-    if (countdown === 0) {
-        clearInterval(interval);
-        console.log('Timer should be cleared');
-    }
+function countDown() {
+    countDownTime--;
+    document.getElementById('countDownDisplay').textContent = countDownTime;
+    console.log(countDownTime);
 };
-
-function cancelCountDown(modal, interval) {
-    removeModal(modal);
-    clearInterval(interval);
-}
