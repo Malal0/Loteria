@@ -505,15 +505,23 @@ rightBtn.addEventListener("click", () => { previousCards.scrollLeft -= previousC
 
 const playPauseBtn = document.getElementById("play-pause-btn");
 const playModal = document.createElement('div');
-let countdown = 10;
+let countDownTime = 10;
 playPauseBtn.addEventListener('click', () => {
-    countdown = 10;
+    countDownTime = 10;
     body.appendChild(playModal);
     playModal.setAttribute('class', 'modal');
     playModal.innerHTML = `
-        <p>The Game begins in <span id='countDownDisplay'>${countdown}</span>s</p>
-        <button class='cancel-Btn'  onclick='removeModal(playModal)'>CANCEL</button>
+        <p>The Game begins in <span id='countDownDisplay'>${countDownTime}</span>s</p>
+        <button class='cancel-Btn'  onclick='cancelCountDown(playModal, countDownInterval)'>CANCEL</button>
     `
+
+    const interval = setInterval(countDown(Interval), 1000);
+
+    if (countDownTime <= 10) {
+        interval();
+    } else {
+        clearInterval(interval);
+    }
 });
 
 const timerBtn = document.getElementById("timer-btn");
@@ -534,12 +542,17 @@ function removeModal(modal) {
     body.removeChild(modal);
 }
 
-function countDown() {
+function countDown(interval) {
     document.getElementById('countDownDisplay').textContent = countdown;
     countdown--;
     console.log(countdown);
     if (countdown === 0) {
-        clearInterval(timerId);
+        clearInterval(interval);
         console.log('Timer should be cleared');
     }
 };
+
+function cancelCountDown(modal, interval) {
+    removeModal(modal);
+    clearInterval(interval);
+}
