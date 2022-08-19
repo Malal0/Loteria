@@ -465,3 +465,42 @@ footer {
     height: 100vh;
     overflow: hidden;
 }
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: var(--lightYellow);
+    width: 80%;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 2px solid black;
+    border-radius: .5em;
+    padding: 40px;
+}
+
+.exit-Btn {
+    transform: rotate(45deg);
+    border: none;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0);
+    outline: 0;
+    color: var(--lightGreen);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    text-stroke: 1px rgb(0, 0, 0);
+}
+
+.exit-Btn:hover,
+.exit-Btn:active {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.cancel-Btn {
+    background-color: red;
+    width: fit-content;
+    padding: 1em;
+    border: 0;
+    outline: none;
+    border-radius: .5em;
+    margin-top: 1.5em;
+}

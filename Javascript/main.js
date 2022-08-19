@@ -503,30 +503,43 @@ menuBtn.addEventListener("click", () => {
 leftBtn.addEventListener("click", () => { previousCards.scrollLeft += previousCards.clientWidth - 38.56 / 2 });
 rightBtn.addEventListener("click", () => { previousCards.scrollLeft -= previousCards.clientWidth - 38.56 });
 
-const timerBtn = document.getElementById("timer-btn");
-
-timerBtn.addEventListener('click', (e) => console.log`${e.target} was clicked`);
-
 const playPauseBtn = document.getElementById("play-pause-btn");
-
+const playModal = document.createElement('div');
+let countdown = 10;
 playPauseBtn.addEventListener('click', () => {
-    const timerModal = document.createElement('div');
-    body.appendChild(timerModal);
-    if (!timerModalOn) {
-        timerModal.innerHTML += `
-    <section>
-        <p>How many seconds inbetween cards?</p>
-        <p>10s <input type="range"></p>
-    </section>
+    countdown = 10;
+    body.appendChild(playModal);
+    playModal.setAttribute('class', 'modal');
+    playModal.innerHTML = `
+        <p>The Game begins in <span id='countDownDisplay'>${countdown}</span>s</p>
+        <button class='cancel-Btn'  onclick='removeModal(playModal)'>CANCEL</button>
     `
-        timerModalOn = true;
-    } else {
-        body.removeChild(timerModal);
-        timerModalOn = false;
-    }
+});
+
+const timerBtn = document.getElementById("timer-btn");
+const timerModal = document.createElement('div');
+timerBtn.addEventListener('click', () => {
+    body.appendChild(timerModal);
+    timerModal.setAttribute('class', 'modal');
+    timerModal.innerHTML = `
+        <button class='exit-Btn' onclick='removeModal(timerModal)'>+</button>
+        <p>How many seconds inbetween cards?</p>
+        <p style="display: flex">10s <input type='range' min='1' max='60' step='1' value='10'></p>
+    `
 });
 
 const body = document.querySelector('body');
 
-let timerModalOn = false;
+function removeModal(modal) {
+    body.removeChild(modal);
+}
 
+function countDown() {
+    document.getElementById('countDownDisplay').textContent = countdown;
+    countdown--;
+    console.log(countdown);
+    if (countdown === 0) {
+        clearInterval(timerId);
+        console.log('Timer should be cleared');
+    }
+};
