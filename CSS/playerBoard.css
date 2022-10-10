@@ -126,7 +126,6 @@ body {
     gap: 1em;
 }
 
-#newCard,
 .button {
     aspect-ratio: 1.496;
     font-size: 32px;
@@ -138,14 +137,12 @@ body {
     box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5)
 }
 
-#newCard:hover,
 .button:hover,
 .tablet-block:hover {
     filter: brightness(110%);
     transform: scale(1.03);
 }
 
-#newCard:active,
 .button:active {
     filter: brightness(95%);
     box-shadow: -6px 16px 16px 19px rgb(0, 0, 0, .5);
