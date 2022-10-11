@@ -96,6 +96,7 @@ body {
     width: 100%;
     object-fit: cover;
     border: 2px solid black;
+    aspect-ratio: .64;
 }
 
 .tablet-block:active {
