@@ -124,12 +124,13 @@ body {
     width: calc(100% - 2em);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 2em;
     /* display: flex;
     justify-content: space-around;
     align-items: baseline; */
     gap: .5em;
     margin: 0 auto;
+    /* height: 5em; */
 }
 
 .button {
@@ -140,7 +141,8 @@ body {
     outline: .4em solid hsl(29, 47%, 90%);
     background-color: hsl(85, 26%, 80%);
     min-width: fit-content;
-    box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5)
+    box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
+    /* height: 100%; */
 }
 
 .button:hover,
