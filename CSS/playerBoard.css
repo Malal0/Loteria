@@ -133,7 +133,7 @@ body {
     /* height: 5em; */
 }
 
-.button {
+/* .button {
     aspect-ratio: 1.496;
     font-size: 15px;
     padding: 11px;
@@ -143,21 +143,21 @@ body {
     min-width: fit-content;
     box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
     /* height: 100%; */
-}
+/*}*/
 
-.button:hover,
+/* .button:hover, */
 .tablet-block:hover {
     filter: brightness(110%);
     transform: scale(1.03);
 }
 
-.button:active {
+/* .button:active {
     filter: brightness(95%);
     box-shadow: -6px 16px 16px 19px rgb(0, 0, 0, .5);
-}
+} */
 
 .txt-btn {
-    /* width: 186px; */
+    max-width: 186px;
     height: 61px;
     font-size: 19px;
     text-transform: capitalize;
