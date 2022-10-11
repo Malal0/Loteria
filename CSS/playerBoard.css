@@ -125,12 +125,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    /* display: flex;
-    justify-content: space-around;
-    align-items: baseline; */
     gap: .5em;
     margin: 0 auto;
-    /* height: 5em; */
     width: 100%;
     max-width: calc(100% - 2em);
     min-width: 280px;
