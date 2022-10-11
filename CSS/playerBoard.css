@@ -133,6 +133,10 @@ body {
     /* height: 5em; */
 }
 
+#buttons>* {
+    place-self: center;
+}
+
 /* .button {
     aspect-ratio: 1.496;
     font-size: 15px;
