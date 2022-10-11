@@ -131,6 +131,9 @@ body {
     gap: .5em;
     margin: 0 auto;
     /* height: 5em; */
+    width: 100%;
+    max-width: calc(100% - 2em);
+    min-width: 280px;
 }
 
 #buttons>* {
