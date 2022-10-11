@@ -314,7 +314,7 @@ body {
     gap: .25em;
     padding: .25em;
     box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
-    height: 70vh;
+    /* height: 70vh; */
 }
 
 .tablet-block {
