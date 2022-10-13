@@ -542,12 +542,24 @@ function countDown() {
 
 //  code for the speech functionality
 
-'speechSynthesis' in window ? console.log("Web Speech API supported!") : console.log("Web Speech API not supported :-(");
+const speechBool = 'speechSynthesis' in window ? true : false;
+let synth = '';
+let utterThis = '';
+let ourText = '';
+// 'speechSynthesis' in window ? console.log("Web Speech API supported!") : console.log("Web Speech API not supported :-(");
 
-const synth = window.speechSynthesis;
-let ourText = "Hey there what's up!!!!";
-const utterThis = new SpeechSynthesisUtterance(ourText);
-
-synth.speak(utterThis);
+if (speechBool) {
+    synth = window.speechSynthesis;
+    utterThis = new SpeechSynthesisUtterance(ourText);
+};
 
 //  code for the speech functionality
+
+function sayTheCard(name) {
+    ourText = name;
+    const utterThis = new SpeechSynthesisUtterance(ourText);
+    utterThis.lang = 'es'
+    synth.speak(utterThis);
+}
+
+console.log(speechBool);
