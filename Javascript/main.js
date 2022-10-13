@@ -557,3 +557,5 @@ function sayTheCard(name) {
 }
 
 //  code for the speech functionality
+
+const speechBtn = document.getElementById('speech-btn');
