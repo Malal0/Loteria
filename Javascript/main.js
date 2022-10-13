@@ -389,6 +389,9 @@ function generateCard() {
     change();
     order++;
     displayPrevCards(index);
+    if (speechBool) {
+        sayTheCard(text);
+    };
 };
 
 function change() {
@@ -543,17 +546,8 @@ function countDown() {
 //  code for the speech functionality
 
 const speechBool = 'speechSynthesis' in window ? true : false;
-let synth = '';
-let utterThis = '';
+let synth = window.speechSynthesis;
 let ourText = '';
-// 'speechSynthesis' in window ? console.log("Web Speech API supported!") : console.log("Web Speech API not supported :-(");
-
-if (speechBool) {
-    synth = window.speechSynthesis;
-    utterThis = new SpeechSynthesisUtterance(ourText);
-};
-
-//  code for the speech functionality
 
 function sayTheCard(name) {
     ourText = name;
@@ -562,4 +556,4 @@ function sayTheCard(name) {
     synth.speak(utterThis);
 }
 
-console.log(speechBool);
+//  code for the speech functionality
