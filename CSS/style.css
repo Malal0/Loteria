@@ -505,3 +505,7 @@ footer {
     border-radius: .5em;
     margin-top: 1.5em;
 }
+
+.speechToggled {
+    filter: brightness(.5);
+}

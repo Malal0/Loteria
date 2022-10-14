@@ -562,6 +562,7 @@ function sayTheCard(name) {
 
 speechBtn.addEventListener('click', toggleSpeech);
 
-function toggleSpeech(){
-    console.log('yeh')
+function toggleSpeech() {
+    //makes the button dark when not in use
+    speechBtn.classList.toggle('speechToggled')
 }
