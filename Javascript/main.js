@@ -7,6 +7,8 @@ const previousCards = document.querySelector("#previousCards");
 const nextBtn = document.querySelector("#card-btn");
 //  the variable for the shuffle & restart button
 const shuffleBtn = document.querySelector("#shuffle-btn");
+//  the variable for the speech button to toggle
+const speechBtn = document.getElementById('speech-btn');
 //  the variable for the shuffle button
 const resetBtn = document.querySelector("#reset-button");
 //  the variables for the card being shown
@@ -558,4 +560,8 @@ function sayTheCard(name) {
 
 //  code for the speech functionality
 
-const speechBtn = document.getElementById('speech-btn');
+speechBtn.addEventListener('click', toggleSpeech);
+
+function toggleSpeech(){
+    console.log('yeh')
+}
