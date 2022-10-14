@@ -121,14 +121,12 @@ body {
 }
 
 #buttons {
-    width: calc(100% - 2em);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     gap: .5em;
-    margin: 0 auto;
-    width: 100%;
-    max-width: calc(100% - 2em);
+    margin: 0 1em;
+    width: calc(100% - 2em);
     min-width: 280px;
 }
 
