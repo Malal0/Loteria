@@ -300,7 +300,7 @@ body {
 .tablet {
     /* height: 783.52px;
     width: 530.08px; */
-    max-width: 90%;
+    max-width: 100%;
     min-width: 280px;
     aspect-ratio: 1/1.478;
     margin: auto;
