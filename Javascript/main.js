@@ -391,7 +391,7 @@ function generateCard() {
     change();
     order++;
     displayPrevCards(index);
-    if (speechBool) {
+    if (speechAvailable) {
         sayTheCard(text);
     };
 };
@@ -547,7 +547,7 @@ function countDown() {
 
 //  code for the speech functionality
 
-const speechBool = 'speechSynthesis' in window ? true : false;
+const speechAvailable = 'speechSynthesis' in window ? true : false;
 let synth = window.speechSynthesis;
 let ourText = '';
 
