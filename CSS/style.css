@@ -507,5 +507,5 @@ footer {
 }
 
 .speechToggled {
-    filter: brightness(.5);
+    filter: brightness(.65);
 }

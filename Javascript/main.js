@@ -25,6 +25,8 @@ const clearCard = document.getElementById("clearCard");
 let newArray = [];
 let storedArray = [];
 
+let speechBool = false;
+
 //  original array of all cards
 const cards = [
     {
@@ -391,7 +393,7 @@ function generateCard() {
     change();
     order++;
     displayPrevCards(index);
-    if (speechAvailable) {
+    if (speechAvailable && speechBool) {
         sayTheCard(text);
     };
 };
@@ -560,9 +562,11 @@ function sayTheCard(name) {
 
 //  code for the speech functionality
 
-speechBtn.addEventListener('click', toggleSpeech);
-
 function toggleSpeech() {
     //makes the button dark when not in use
     speechBtn.classList.toggle('speechToggled')
+    // toggle speechBool to true or false
+    speechBool = !speechBool;
 }
+
+speechBtn.addEventListener('click', toggleSpeech);
