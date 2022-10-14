@@ -96,14 +96,12 @@ body {
 }
 
 .txt-btn {
-    width: 186px;
-    height: 61px;
     font-size: 19px;
     text-transform: capitalize;
     border: 2px solid #16181e;
     border-radius: 10px;
-    /* background-image: linear-gradient(135deg, #e6ffda, #f7fff3, #e6ffda); */
     background-color: var(--lightGreen);
+    padding: .8em;
 }
 
 .txt-btn:hover {
@@ -366,15 +364,17 @@ body {
 }
 
 #buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: .5em;
+    margin: 0 auto;
     width: 100%;
-    /* display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(auto, 1fr);
-    gap: 12.5%; */
-    display: flex;
+    min-width: 280px;
+    /* display: flex;
     justify-content: space-around;
     align-items: baseline;
-    gap: 1em;
+    gap: 1em; */
 }
 
 #card-btn {
