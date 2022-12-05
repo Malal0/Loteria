@@ -370,14 +370,6 @@ function currentCard(number, name, image) {
 }
 //
 function shuffleCards() {
-    // for (let i = 0; i < cards.length; i++) {
-    //     let rand = Math.floor(Math.random() * 54)
-    //     if (!newCardsArray.includes(rand)) {
-    //         newCardsArray.push(rand);
-    //     } else if (newCardsArray.includes(rand) && newCardsArray.length < 54) {
-    //         i--;
-    //     }
-    // };
     newCardsArray = randomArray(54);
     console.log(newCardsArray);
 }
@@ -531,8 +523,11 @@ timerBtn.addEventListener('click', () => {
     timerModal.innerHTML = `
         <button class='exit-Btn' onclick='removeModal(timerModal)'>+</button>
         <p>How many seconds inbetween cards?</p>
-        <p style="display: flex">10s <input type='range' min='1' max='60' step='1' value='10'></p>
-    `
+        <p style="display: flex"><span id ='timer-time-text'>10</span>s <input id='timer-input' type='range' min='1' max='60' step='1' value='10'></p>
+    `;
+    const timerInput = document.getElementById('timer-input');
+    const timerTimeText = document.getElementById('timer--time-text');
+    timerInput.addEventListener('input', () => console.log(timerInput.value))
 });
 
 const body = document.querySelector('body');
