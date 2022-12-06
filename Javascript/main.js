@@ -515,7 +515,9 @@ playPauseBtn.addEventListener('click', () => {
         // console.log(countDownTime);
         if (countDownTime === 0) {
             clearInterval(timer);
-            removeModal(playModal)
+            removeModal(playModal);
+            console.log('next card');
+            generateCard();
         }
     }, 1000);
     body.appendChild(playModal);
