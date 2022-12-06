@@ -511,10 +511,11 @@ playPauseBtn.addEventListener('click', () => {
     countDownTime = 10;
     const timer = setInterval(() => {
         countDownTime--;
-        console.log(countDownTime);
-
+        countDownDisplay.innerHTML = countDownTime;
+        // console.log(countDownTime);
         if (countDownTime === 0) {
             clearInterval(timer);
+            removeModal(playModal)
         }
     }, 1000);
     body.appendChild(playModal);
