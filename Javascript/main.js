@@ -27,6 +27,8 @@ let storedArray = [];
 
 let speechBool = false;
 
+let intervalTime = 10;
+
 //  original array of all cards
 const cards = [
     {
@@ -515,7 +517,6 @@ playPauseBtn.addEventListener('click', () => {
     `
 });
 
-let intervalTime = 10;
 const timerBtn = document.getElementById("timer-btn");
 const timerModal = document.createElement('div');
 timerBtn.addEventListener('click', () => {
@@ -532,7 +533,7 @@ timerBtn.addEventListener('click', () => {
         timerTimeText.innerHTML = timerInput.value;
         intervalTime = timerInput.value;
         console.log(intervalTime);
-    })
+    });
 });
 
 const body = document.querySelector('body');
