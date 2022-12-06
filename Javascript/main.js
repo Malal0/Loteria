@@ -509,6 +509,14 @@ const playModal = document.createElement('div');
 let countDownTime = 10;
 playPauseBtn.addEventListener('click', () => {
     countDownTime = 10;
+    const timer = setInterval(() => {
+        countDownTime--;
+        console.log(countDownTime);
+
+        if (countDownTime === 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
     body.appendChild(playModal);
     playModal.setAttribute('class', 'modal');
     playModal.innerHTML = `
@@ -542,11 +550,11 @@ function removeModal(modal) {
     body.removeChild(modal);
 }
 
-function countDown() {
-    countDownTime--;
-    document.getElementById('countDownDisplay').textContent = countDownTime;
-    console.log(countDownTime);
-};
+// function countDown() {
+//     countDownTime--;
+//     document.getElementById('countDownDisplay').textContent = countDownTime;
+//     console.log(countDownTime);
+// };
 
 //  code for the speech functionality
 
