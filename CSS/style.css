@@ -311,8 +311,7 @@ button,
 .tablet {
     /* height: 783.52px;
     width: 530.08px; */
-    max-width: 100%;
-    min-width: 280px;
+    width: clamp(280px, 100%, 680px);
     aspect-ratio: 1/1.478;
     margin: auto;
     border-radius: 3px;
@@ -320,8 +319,6 @@ button,
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    /* gap: 17.23px;
-    padding: 17.23px; */
     gap: .25em;
     padding: .25em;
     box-shadow: -9px 20px 16px 19px rgb(0, 0, 0, .5);
