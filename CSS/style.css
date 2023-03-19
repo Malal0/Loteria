@@ -34,7 +34,7 @@ body {
 
 /*  Classes */
 .margin-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 1em;
 }
 
@@ -118,7 +118,7 @@ body {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     gap: 1em;
     /* position: absolute;
     right: 0;
